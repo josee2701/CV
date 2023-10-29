@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Profile from './components/Profile';
 import About from './components/About';
 import Home from './components/Home';
+import './App.css';
 
 function App() {
   const [hojaDeVida, setHojaDeVida] = useState(null);
@@ -19,20 +20,23 @@ function App() {
   }
 
   return (
-    <div className="container">
-      <Navbar />
-      <Home/>
-      <Profile 
-        nombre={hojaDeVida.nombre} 
-      />
-      <About 
-        profesion={hojaDeVida.profesion}
-        resumen={hojaDeVida.resumen}
-        experiencia={hojaDeVida.experiencia}
-        educacion={hojaDeVida.educacion}
-      />
+  <div>
+    <Navbar />
+    <div className="combined-profile-container">
+      <Home />
+      <div className="profile-about-section">
+        <Profile nombre={hojaDeVida.nombre} />
+        <About 
+          profesion={hojaDeVida.profesion}
+          resumen={hojaDeVida.resumen}
+          experiencia={hojaDeVida.experiencia}
+          educacion={hojaDeVida.educacion}
+        />
+      </div>
     </div>
-  );
+  </div>
+);
+
 }
 
 export default App;

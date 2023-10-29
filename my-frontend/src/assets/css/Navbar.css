@@ -1,3 +1,54 @@
-.fa-download {
-    margin-right: 10px;
+.header {
+	padding: 0 0 0 50px;
+	position: fixed;
+	left: 50px;
+	right: 50px;
+	top: 40px;
+	height: 80px;
+	z-index: 100;
+	background: #585d65;
+	border-radius: 80px;
+	-moz-border-radius: 80px;
+	-webkit-border-radius: 80px;
+	-khtml-border-radius: 80px;
+	transition: all 0.7s cubic-bezier(0.165, 0.85, 0.45, 1);
+	-moz-transition: all 0.7s cubic-bezier(0.165, 0.85, 0.45, 1);
+	-webkit-transition: all 0.7s cubic-bezier(0.165, 0.85, 0.45, 1);
+	-o-transition: all 0.7s cubic-bezier(0.165, 0.85, 0.45, 1);
+}
+
+.logo {
+	position: relative;
+	float: left;
+	width: 200px;
+	height: 80px;
+	display: flex;
+	font-size: 0;
+	line-height: 1.2;
+	font-weight: 800;
+	color: #FFF;
+	align-items: center;
+}
+
+.logo a {
+	color: #FFF;
+}
+
+.logo img {
+	max-width: 100%;
+}
+
+.logo img.logo-img {
+	margin-right: 30px;
+	width: auto;
+	height: auto;
+	max-width: 36px;
+	display: inline-block;
+}
+
+.logo .logo-lnk {
+	font-size: 18px;
+	text-decoration: none;
+	display: inline-block;
+	max-width: 100px;
 }

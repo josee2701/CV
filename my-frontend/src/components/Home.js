@@ -1,15 +1,18 @@
-import React from 'react';  // <-- Importa los hooks
+import React from 'react';
 import '../assets/css/Home.css';
-import profileImage from '../assets/Gallery/Perfil.png';  // Importa la imagen
+import profileImage from '../assets/Gallery/Perfil.png';
 
+const profileContainerStyle = {
+  position: 'fixed',
+};
 
 function Home(props) {
   return (
-      <div className="profile-container">
-          <div className="image-container">
-            <img src={profileImage} className="profile-image" alt="Profile"/>  {/* Utiliza la imagen importada */}
-          </div>
+    <div className="background-bg">
+      <div style={profileContainerStyle} className="background-filter circle">
+        <div className="background-img" style={{ backgroundImage: `url(${profileImage})` }}></div>
       </div>
+    </div>
   );
 }
 

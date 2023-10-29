@@ -1,23 +1,92 @@
-.profile-container {
-    display: flex;
-    background-color: #E5E5E5;
-    padding: 50px;
-    border-radius: 10px;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+
+-------------------------------
+
+.background-bg {
+	top: 0;
+	left: 0;
+	width: 1%;
+	height: 100%;
 }
 
-.image-container {
-    padding-right: 50px;
-    width: 90vh; /* Suponiendo un diseño vertical, usamos vh para el ancho */
-    height: 90vh;
-    overflow: hidden; /* Oculta cualquier parte de la imagen que exceda este contenedor */
-    position: relative; /* Asegurarse de que sea el referente para la posición absoluta de la imagen */
+
+.background-filter {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	background-color: #68e0cf;
 }
 
-.profile-image {
-    position: absolute; /* Permite el desplazamiento con coordenadas */
-    left: -15%; /* Desplaza ligeramente la imagen a la izquierda */
-    width: 65%; /* La imagen excederá ligeramente el tamaño del contenedor */
-    height: 110%; /* La imagen excederá ligeramente el tamaño del contenedor */
-    border-radius: 50%;
+.background-filter .background-img {
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	mix-blend-mode: luminosity;
+}
+
+.background-filter.gradient:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: -moz-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.5) 0%, #373b40 90%);
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.5) 0%, #373b40 90%);
+	background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.5) 0%, #373b40 90%);
+}
+
+.background-filter.gradient .background-img {
+	-webkit-filter: none;
+	filter: none;
+	mix-blend-mode: unset;
+}
+
+.background-filter.circle {
+	clip-path: circle(75% at 10% 45%);
+	-webkit-clip-path: circle(75% at 10% 45%);
+}
+
+.background-filter.circle .background-img {
+	-webkit-filter: none;
+	filter: none;
+	mix-blend-mode: unset;
+}
+
+
+.background-img {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+
+
+@media (max-width: 1199px) {
+	.background-bg {
+		position: relative;
+		width: 100%;
+		height: 70vh;
+	}
+
+
+	.background-filter.circle {
+		clip-path: circle(100% at 50% 0%);
+		-webkit-clip-path: circle(100% at 50% 0%);
+	}
+
+}
+
+@media (max-width: 720px) {
+	.background-bg {
+		height: 450px;
+	}
+
 }
