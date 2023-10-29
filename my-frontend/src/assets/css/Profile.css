@@ -1,0 +1,17 @@
+/* Profile.css */
+
+.container {
+    display: flex;
+    align-items: center; /* Alinea verticalmente en el centro */
+  }
+  
+.image-container {
+    flex: 1; /* Toma la mitad del espacio disponible */
+    /* ... tus estilos para la imagen aquí ... */
+}
+ 
+.info-container {
+    flex: 1; /* Toma la mitad del espacio disponible */
+    /* ... tus estilos para la información aquí ... */
+}
+  

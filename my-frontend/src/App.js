@@ -1,23 +1,36 @@
-import React from 'react';
-import './App.css';
-import HojaDeVida from './HojaDeVida'; // Importa el componente personalizado
-
-
-
+import React, { useState, useEffect } from 'react';
+import Navbar from './components/Navbar';
+import Profile from './components/Profile';
+import About from './components/About';
+import logo from './logo.svg'; // Puedes cambiar esto a la imagen de tu perfil
 
 function App() {
-  // Datos de la hoja de vida
-  const hojaDeVidaData = {
-    nombre: 'Tu Nombre',
-    profesion: 'Tu Profesión',
-    resumen: 'Un resumen breve sobre ti...',
-    experiencia: ['Trabajo 1', 'Trabajo 2'],
-    educacion: ['Escuela 1', 'Universidad 2'],
-  };
+  const [hojaDeVida, setHojaDeVida] = useState(null);
+
+  useEffect(() => {
+    fetch('http://localhost:5000/api/hoja-de-vida')
+      .then((response) => response.json())
+      .then((data) => setHojaDeVida(data))
+      .catch((error) => console.error('Error al obtener los datos:', error));
+  }, []);
+
+  if (!hojaDeVida) {
+    return <div>Cargando...</div>;
+  }
 
   return (
-    <div className="App">
-      <HojaDeVida {...hojaDeVidaData} /> {/* Renderiza el componente personalizado */}
+    <div className="container">
+      <Navbar />
+      <Profile 
+        logo={logo}
+        nombre={hojaDeVida.nombre} 
+      />
+      <About 
+        profesion={hojaDeVida.profesion}
+        resumen={hojaDeVida.resumen}
+        experiencia={hojaDeVida.experiencia}
+        educacion={hojaDeVida.educacion}
+      />
     </div>
   );
 }
