@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Profile from './components/Profile';
 import About from './components/About';
-import logo from './logo.svg'; // Puedes cambiar esto a la imagen de tu perfil
+import Home from './components/Home';
 
 function App() {
   const [hojaDeVida, setHojaDeVida] = useState(null);
@@ -21,8 +21,8 @@ function App() {
   return (
     <div className="container">
       <Navbar />
+      <Home/>
       <Profile 
-        logo={logo}
         nombre={hojaDeVida.nombre} 
       />
       <About 

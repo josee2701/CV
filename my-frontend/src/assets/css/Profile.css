@@ -1,17 +1,60 @@
-/* Profile.css */
-
-.container {
+.profile-container {
     display: flex;
-    align-items: center; /* Alinea verticalmente en el centro */
-  }
-  
+    background-color: #E5E5E5;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
 .image-container {
-    flex: 1; /* Toma la mitad del espacio disponible */
-    /* ... tus estilos para la imagen aquí ... */
+    flex: 1;
+    padding-right: 50px;
+    width: 90vh; /* Suponiendo un diseño vertical, usamos vh para el ancho */
+    height: 90vh;
+    overflow: hidden; /* Oculta cualquier parte de la imagen que exceda este contenedor */
+    position: relative; /* Asegurarse de que sea el referente para la posición absoluta de la imagen */
 }
- 
+
+.profile-image {
+    position: absolute; /* Permite el desplazamiento con coordenadas */
+    left: -10%; /* Desplaza ligeramente la imagen a la izquierda */
+    width: 110%; /* La imagen excederá ligeramente el tamaño del contenedor */
+    height: 110%; /* La imagen excederá ligeramente el tamaño del contenedor */
+    border-radius: 50%;
+}
+
 .info-container {
-    flex: 1; /* Toma la mitad del espacio disponible */
-    /* ... tus estilos para la información aquí ... */
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-  
+
+.profile-name {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.profile-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.profile-description {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.contact-button {
+    padding: 10px 20px;
+    border: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #333;
+}

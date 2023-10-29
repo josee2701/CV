@@ -1,0 +1,23 @@
+.profile-container {
+    display: flex;
+    background-color: #E5E5E5;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.image-container {
+    padding-right: 50px;
+    width: 90vh; /* Suponiendo un diseño vertical, usamos vh para el ancho */
+    height: 90vh;
+    overflow: hidden; /* Oculta cualquier parte de la imagen que exceda este contenedor */
+    position: relative; /* Asegurarse de que sea el referente para la posición absoluta de la imagen */
+}
+
+.profile-image {
+    position: absolute; /* Permite el desplazamiento con coordenadas */
+    left: -15%; /* Desplaza ligeramente la imagen a la izquierda */
+    width: 65%; /* La imagen excederá ligeramente el tamaño del contenedor */
+    height: 110%; /* La imagen excederá ligeramente el tamaño del contenedor */
+    border-radius: 50%;
+}

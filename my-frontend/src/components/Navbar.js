@@ -23,7 +23,7 @@ function Navbar() {
         <nav style={navbarStyle}>
             <div style={logoContainer}>
                 <img src={logo} alt="Logo" style={logoStyle} />
-                <h2 style={titleStyle}>Jose Campos</h2>
+                <h3 style={titleStyle}>Jose <br/> Campos</h3>
             </div>
             <div style={buttonContainer}>
                 <button 
@@ -62,12 +62,12 @@ function Navbar() {
                     CONTACT
                 </button>
                 <button 
-    style={isDownloadButtonHovered ? {...downloadButtonStyle, backgroundColor: '#777'} : downloadButtonStyle} 
-    onMouseEnter={() => setDownloadButtonHovered(true)} 
-    onMouseLeave={() => setDownloadButtonHovered(false)}
->
-    DOWNLOAD CV <i className="fa fa-download"></i>
-</button>
+                    style={isDownloadButtonHovered ? {...downloadButtonStyle, backgroundColor: '#777'} : downloadButtonStyle} 
+                    onMouseEnter={() => setDownloadButtonHovered(true)} 
+                    onMouseLeave={() => setDownloadButtonHovered(false)}
+                >
+                    DOWNLOAD CV <i className="fa fa-download"></i>
+                </button>
             </div>
         </nav>
         
@@ -102,8 +102,8 @@ const logoContainer = {
 };
 
 const logoStyle = {
-    width: '50px', // Aumentado de 30px a 50px
-    height: '50px', // Aumentado de 30px a 50px
+    width: '70px', // Aumentado de 30px a 50px
+    height: '70px', // Aumentado de 30px a 50px
     marginRight: '10px'
 };
 
