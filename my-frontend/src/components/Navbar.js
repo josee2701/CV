@@ -26,12 +26,12 @@ function Navbar() {
             <div className="logo">
                 <a href="#">
                     <img className="logo-img" src={logo} alt="Logo" />
-                    <span className="logo-lnk">Jose <br />Campos</span>
+                    <span className="logo-lnk">Jose <br/>Campos</span>
                 </a>
             </div>
             {/* <div style={logoContainer}>
                 <img src={logo} alt="Logo" style={logoStyle} />
-                <h3 style={titleStyle}>Jose <br/> Campos</h3>
+                <h3 style={titleStyle}>Jose <br//> Campos</h3>
             </div> */}
             <div style={buttonContainer}>
                 <button 

@@ -1,6 +1,6 @@
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #492121; /* Cambiado a un azul claro */
+  background-color: #492121;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -24,7 +24,6 @@ body {
 }
 
 .profile, .about {
-  background-color: #FFFFFF;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -39,4 +38,95 @@ body {
 .about h3 {
   font-size: 18px;
   margin-bottom: 10px;
+}
+/* - Background Option */
+.background-bg {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 45%;
+	height: 100%;
+}
+
+
+.background-filter {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	background-color: #68e0cf;
+}
+
+.background-filter .background-img {
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	mix-blend-mode: luminosity;
+}
+
+.background-filter.gradient:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: -moz-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.5) 0%, #373b40 90%);
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.5) 0%, #373b40 90%);
+	background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.5) 0%, #373b40 90%);
+}
+
+.background-filter.gradient .background-img {
+	-webkit-filter: none;
+	filter: none;
+	mix-blend-mode: unset;
+}
+
+.background-filter.circle {
+	clip-path: circle(75% at 10% 45%);
+	-webkit-clip-path: circle(75% at 10% 45%);
+}
+
+.background-filter.circle .background-img {
+	-webkit-filter: none;
+	filter: none;
+	mix-blend-mode: unset;
+}
+
+
+.background-img {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+
+
+@media (max-width: 1199px) {
+	.background-bg {
+		position: relative;
+		width: 100%;
+		height: 70vh;
+	}
+
+
+	.background-filter.circle {
+		clip-path: circle(100% at 50% 0%);
+		-webkit-clip-path: circle(100% at 50% 0%);
+	}
+
+}
+
+@media (max-width: 720px) {
+	.background-bg {
+		height: 450px;
+	}
+
 }

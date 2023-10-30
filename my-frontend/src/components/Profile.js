@@ -21,7 +21,7 @@ function Profile(props) {
         <div className="centrize full-width">
           <div className="vertical-center">
             <h1 className="h-title">
-              Jose  Fernando<br /> Campos S.
+              Jose  Fernando<br/> Campos S.
             </h1>
             <div className="started-content">
               <div className="h-subtitles">
