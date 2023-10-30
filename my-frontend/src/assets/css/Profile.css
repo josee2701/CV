@@ -1,31 +1,43 @@
-.profile-container {
+.section.started {
     display: flex;
-    flex-direction: column;  
-    align-items: flex-start;  
-    justify-content: center;
-    margin-left: 45vh;  /* Ajusta este valor según lo necesites */
-    max-width: 50%;  /* Limita el ancho del contenido */
+	margin: 0;
+	padding-top: 0;
+	padding-left: 0;
+	padding-bottom: 0;
+	position: relative;
+	overflow: visible;
+	height: 100vh;
+	z-index: 11;
+    left: 0;
 }
 
-.info-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 20px 20px 20px 0;  /* Removí el padding de la izquierda */
+.section.started .h-title {
+	margin: 13vw 0 0 30vw;
+	padding: 4.2vw;
+	font-size: 4.2vw;
+	line-height: 1.2;
+	font-weight: 800;
+	color: #FFF;
+	background: #492121;
+	word-break: break-word;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+	border-radius: 264px;
+	-moz-border-radius: 264px;
+	-webkit-border-radius: 264px;
+	-khtml-border-radius: 264px;
 }
 
-.profile-name {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+
+.section.started .started-content .h-subtitles {
+	margin: 0 0 29px 45vw;
+	height: 18px;
+    color: #0c042b;
 }
 
-.profile-title {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    color: #555;
+.section.started .started-content .h-text {
+	margin: 0 0 29px 45vw;
+	font-size: 16px;
+	color: #ffffff;
 }
 
-.profile-description {
-    font-size: 1rem;
-    margin-bottom: 20px;
-}
