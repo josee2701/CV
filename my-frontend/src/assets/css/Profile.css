@@ -1,14 +1,14 @@
 .section.started {
     display: flex;
 	margin: 0;
-	padding-top: 0;
-	padding-left: 0;
-	padding-bottom: 0;
+	padding-block-start: 0;
+	padding-inline-start: 0;
+	padding-block-end: 0;
 	position: relative;
 	overflow: visible;
-	height: 100vh;
+	block-size: 100vh;
 	z-index: 11;
-    left: 0;
+    inset-inline-start: 0;
 }
 
 .section.started .h-title {
@@ -31,7 +31,7 @@
 
 .section.started .started-content .h-subtitles {
 	margin: 0 0 29px 45vw;
-	height: 18px;
+	block-size: 18px;
     color: #0c042b;
 }
 

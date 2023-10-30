@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import logo from '../assets/Gallery/Logo_personal.png';
 import 'font-awesome/css/font-awesome.min.css';
+import React, { useEffect, useState } from 'react';
+import logo from '../assets/Gallery/Logo_personal.png';
 import '../assets/css/Navbar.css';
 
 
@@ -89,10 +89,10 @@ function Navbar() {
 const navbarStyle = {
     padding: "0 10px 9px 50px", // Reducir el valor del padding en el lado izquierdo
     position: "fixed",
-    left: "50px",
-    right: "50px",
-    top: "40px",
-    height: "80px",
+    insetInlineStart: "50px", // Cambiar de "inset-inline-start" a "insetInlineStart"
+    insetInlineEnd: "50px", // Cambiar de "inset-inline-end" a "insetInlineEnd"
+    insetBlockStart: "40px", // Cambiar de "inset-block-start" a "insetBlockStart"
+    blockSize: "80px", // Cambiar de "block-size" a "blockSize"
     zIndex: 100,
     background: "#333",
     borderRadius: "80px",
@@ -105,16 +105,13 @@ const navbarStyle = {
     OTransition: "all 0.7s cubic-bezier(0.165, 0.85, 0.45, 1)",
   };
   
-  
-  
   const buttonContainer = {
     display: 'flex',
     gap: '15px',
     position: "relative",
     float: "left",
-    width: "200px",
-    height: "80px",
-    left: "350px",
+    blockSize: "80px", // Cambiar de "block-size" a "blockSize"
+    insetInlineStart: "400px",
   };
   
   const buttonStyle = {
@@ -138,9 +135,9 @@ const navbarStyle = {
     borderRadius: '20px',
     padding: '8px 25px',
     transition: 'background-color 0.3s',
-    float: 'right', // Agregado: utiliza comas en lugar de punto y coma
-    marginTop: '8px', // Agregado: cambia margen superior a minúsculas
-    marginRight: '8px', // Agregado: cambia margen derecho a minúsculas
+    float: 'right',
+    marginBlockStart: '8px', // Cambiar de "margininset-block-start" a "marginBlockStart"
+    marginInlineEnd: '8px', // Cambiar de "margininset-inline-end" a "marginInlineEnd"
     borderColor: '#fff',
     transform: 'translateY(0)',
     WebkitTransform: 'translateY(0)',
@@ -148,18 +145,20 @@ const navbarStyle = {
     OTransform: 'translateY(0)',
   };
   
-const navbarMobileStyle = {
+  const navbarMobileStyle = {
     ...navbarStyle,
     flexDirection: 'column',
     padding: '10px',
-};
-
-// eslint-disable-next-line no-unused-vars
-const buttonContainerMobile = {
+    display: 'flex',
+  };
+  
+  // eslint-disable-next-line no-unused-vars
+  const buttonContainerMobile = {
     ...buttonContainer,
     flexDirection: 'column',
     alignItems: 'center',
-    gap: '5px'
-};
+    gap: '5px',
+  };
+  
 
 export default Navbar;

@@ -1,10 +1,10 @@
 .header {
-	padding: 0 0 0 50px;
+	padding: 0 0 0 60px;
 	position: fixed;
-	left: 50px;
-	right: 50px;
-	top: 40px;
-	height: 80px;
+	inset-inline-start: 50px;
+	inset-inline-end: 50px;
+	inset-block-start: 40px;
+	block-size: 80px;
 	z-index: 100;
 	background: #585d65;
 	border-radius: 80px;
@@ -19,9 +19,9 @@
 
 .logo {
 	position: relative;
-	float: left;
-	width: 200px;
-	height: 80px;
+	float: inline-start;
+	inline-size: 200px;
+	block-size: 80px;
 	display: flex;
 	font-size: 0;
 	line-height: 1.2;
@@ -35,14 +35,14 @@
 }
 
 .logo img {
-	max-width: 100%;
+	max-inline-size: 100%;
 }
 
 .logo img.logo-img {
-	margin-right: 30px;
-	width: auto;
-	height: auto;
-	max-width: 36px;
+	margin-inline-end: 30px;
+	inline-size: auto;
+	block-size: auto;
+	max-inline-size: 36px;
 	display: inline-block;
 }
 
@@ -50,5 +50,5 @@
 	font-size: 18px;
 	text-decoration: none;
 	display: inline-block;
-	max-width: 100px;
+	max-inline-size: 100px;
 }
