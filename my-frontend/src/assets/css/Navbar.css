@@ -52,3 +52,18 @@
 	display: inline-block;
 	max-inline-size: 100px;
 }
+
+.boton {
+	position: relative;
+	float: inline-start;
+	inline-size: 200px;
+	block-size: 80px;
+	display: flex;
+	font-size: 0;
+	line-height: 1.2;
+	font-weight: 800;
+	color: #FFF;
+	align-items: center;
+    inset-inline-start: "400px",
+
+}

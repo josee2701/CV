@@ -5,7 +5,7 @@ import '../assets/css/Layout.css';
 //   position: 'fixed',
 // };
 
-function Home(props) {
+function todo() {
   return (
     <><div class="container">
 
@@ -41,22 +41,22 @@ function Home(props) {
                   </li>
                   <li class="menu-item">
                     <a href="#section-about">
-                      {/* <span class="animated-button"><span><em>A</em><em>b</em><em>o</em><em>u</em><em>t</em></span></span> */}
+                      <span class="animated-button"><span><em>A</em><em>b</em><em>o</em><em>u</em><em>t</em></span></span>
                     </a>
                   </li>
                   <li class="menu-item">
                     <a href="#section-experience">
-                      {/* <span class="animated-button"><span><em>R</em><em>e</em><em>s</em><em>u</em><em>m</em><em>e</em></span></span> */}
+                      <span class="animated-button"><span><em>R</em><em>e</em><em>s</em><em>u</em><em>m</em><em>e</em></span></span>
                     </a>
                   </li>
                   <li class="menu-item">
                     <a href="#section-portfolio">
-                      {/* <span class="animated-button"><span><em>P</em><em>o</em><em>r</em><em>t</em><em>f</em><em>o</em><em>l</em><em>i</em><em>o</em></span></span> */}
+                      <span class="animated-button"><span><em>P</em><em>o</em><em>r</em><em>t</em><em>f</em><em>o</em><em>l</em><em>i</em><em>o</em></span></span>
                     </a>
                   </li>
                   <li class="menu-item">
                     <a href="#section-contacts">
-                      {/* <span class="animated-button"><span><em>C</em><em>o</em><em>n</em><em>t</em><em>a</em><em>c</em><em>t</em></span></span> */}
+                      <span class="animated-button"><span><em>C</em><em>o</em><em>n</em><em>t</em><em>a</em><em>c</em><em>t</em></span></span>
                     </a>
                   </li>
                 </ul>
@@ -970,9 +970,9 @@ function Home(props) {
 
     </div><footer class="footer">
         <div class="socials">
-          <a target="_blank" href="https://www.facebook.com/">
+          {/* <a target="_blank" href="https://www.facebook.com/">
             <i class="icon fab fa-facebook-f"></i>
-          </a>
+          </a> */}
 
         </div>
       </footer></>
@@ -981,4 +981,4 @@ function Home(props) {
   );
 }
 
-export default Home;
+export default todo;

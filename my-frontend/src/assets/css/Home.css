@@ -66,26 +66,41 @@
 	background-position: center center;
 	background-size: cover;
 }
+.profileContainer {
+	position: fixed;
+  }
 
 
-@media (max-inline-size: 1199px) {
-	.background-bg {
-		position: relative;
-		inline-size: 100%;
-		block-size: 50vh;
+@media (max-width: 1199px) {
+	
+	.background-filter {
+		position: absolute;
+		inset-block-start: 0;
+		inset-inline-start: 0;
+		inline-size: 110%;
+		block-size: 55%;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
 	}
-
+	.background-img {
+		position: absolute;
+		inset-inline-start: 0;
+		inset-block-start: 0;
+		inline-size: 100%;
+		background-position: top center;
+		background-size: cover auto;
+	}
 
 	.background-filter.circle {
-		clip-path: circle(100% at 50% 0%);
-		-webkit-clip-path: circle(100% at 50% 0%);
+		clip-path: circle(100% at 100% 0%);
+		-webkit-clip-path: circle(75% at 50% 5%);
 	}
 
 }
+@media (max-width: 720px) {
+		.background-bg {
+			block-size: 450px;
+		}
 
-@media (max-inline-size: 720px) {
-	.background-bg {
-		block-size: 450px;
 	}
-
-}

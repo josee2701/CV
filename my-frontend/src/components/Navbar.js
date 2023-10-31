@@ -33,21 +33,36 @@ function Navbar() {
                 <img src={logo} alt="Logo" style={logoStyle} />
                 <h3 style={titleStyle}>Jose <br//> Campos</h3>
             </div> */}
-            <div style={buttonContainer}>
-                <button 
-                    style={hoveredButton === 'HOME' ? {...buttonStyle, color: 'red', transform: 'translateY(-5px)'} : buttonStyle} 
-                    onMouseEnter={() => setHoveredButton('HOME')} 
-                    onMouseLeave={() => setHoveredButton(null)}
-                >
-                    HOME
-                </button>
-                <button 
-                    style={hoveredButton === 'ABOUT' ? {...buttonStyle, color: 'red', transform: 'translateY(-5px)'} : buttonStyle} 
-                    onMouseEnter={() => setHoveredButton('ABOUT')} 
-                    onMouseLeave={() => setHoveredButton(null)}
-                >
-                    ABOUT
-                </button>
+            <div >
+                <div className="boton">
+                <a href="#section-profile">
+                    <button
+                        style={
+                        hoveredButton === 'HOME'
+                            ? { ...buttonStyle, color: 'red', transform: 'translateY(-5px)' }
+                            : buttonStyle
+                        }
+                        onMouseEnter={() => setHoveredButton('HOME')}
+                        onMouseLeave={() => setHoveredButton(null)}
+                    >
+                        HOME
+                    </button>
+                </a>
+                <a href="#section-about">
+                    <button
+                        style={
+                        hoveredButton === 'ABOUT'
+                            ? { ...buttonStyle, color: 'red', transform: 'translateY(-5px)' }
+                            : buttonStyle
+                        }
+                        onMouseEnter={() => setHoveredButton('ABOUT')}
+                        onMouseLeave={() => setHoveredButton(null)}
+                    >
+                        ABOUT
+                    </button>
+                </a>
+                <a href="#section-resumen">
+
                 <button 
                     style={hoveredButton === 'RESUME' ? {...buttonStyle, color: 'red', transform: 'translateY(-5px)'} : buttonStyle} 
                     onMouseEnter={() => setHoveredButton('RESUME')} 
@@ -55,6 +70,9 @@ function Navbar() {
                 >
                     RESUME
                 </button>
+                </a>
+                <a href="#section-portafolio">
+
                 <button 
                     style={hoveredButton === 'PORTFOLIO' ? {...buttonStyle, color: 'red', transform: 'translateY(-5px)'} : buttonStyle} 
                     onMouseEnter={() => setHoveredButton('PORTFOLIO')} 
@@ -62,13 +80,18 @@ function Navbar() {
                 >
                     PORTFOLIO
                 </button>
+                </a>
+                <a href="#section-contacto">
+
                 <button 
+                
                     style={hoveredButton === 'CONTACT' ? {...buttonStyle, color: 'red', transform: 'translateY(-5px)'} : buttonStyle} 
                     onMouseEnter={() => setHoveredButton('CONTACT')} 
                     onMouseLeave={() => setHoveredButton(null)}
                 >
                     CONTACT
                 </button>
+                </a>
                 <button 
                     style={isDownloadButtonHovered ? {...downloadButtonStyle, backgroundColor: '#777'} : downloadButtonStyle} 
                     onMouseEnter={() => setDownloadButtonHovered(true)} 
@@ -76,6 +99,7 @@ function Navbar() {
                 >
                     DOWNLOAD CV <i className="fa fa-download"></i>
                 </button>
+                </div>
             </div>
             
         </nav>
@@ -103,16 +127,16 @@ const navbarStyle = {
     MozTransition: "all 0.7s cubic-bezier(0.165, 0.85, 0.45, 1)",
     WebkitTransition: "all 0.7s cubic-bezier(0.165, 0.85, 0.45, 1)",
     OTransition: "all 0.7s cubic-bezier(0.165, 0.85, 0.45, 1)",
+    
   };
   
-  const buttonContainer = {
-    display: 'flex',
-    gap: '15px',
-    position: "relative",
-    float: "left",
-    blockSize: "80px", // Cambiar de "block-size" a "blockSize"
-    insetInlineStart: "400px",
-  };
+//   const buttonContainer = {
+//     display: 'flex',
+//     gap: '15px',
+//     position: "relative",
+//     float: "left",
+//     blockSize: "80px", // Cambiar de "block-size" a "blockSize"
+//   };
   
   const buttonStyle = {
     backgroundColor: 'transparent',
@@ -153,12 +177,12 @@ const navbarStyle = {
   };
   
   // eslint-disable-next-line no-unused-vars
-  const buttonContainerMobile = {
-    ...buttonContainer,
-    flexDirection: 'column',
-    alignItems: 'center',
-    gap: '5px',
-  };
+//   const buttonContainerMobile = {
+//     ...buttonContainer,
+//     flexDirection: 'column',
+//     alignItems: 'center',
+//     gap: '5px',
+//   };
   
 
 export default Navbar;
