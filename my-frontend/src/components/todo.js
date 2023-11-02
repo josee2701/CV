@@ -167,63 +167,6 @@ function todo() {
 }
 </style><style type="text/css" id="CookieConsentStateDisplayStyles">.cookieconsent-optin,.cookieconsent-optin-preferences,.cookieconsent-optin-statistics,.cookieconsent-optin-marketing{display:block;display:initial;}.cookieconsent-optout-preferences,.cookieconsent-optout-statistics,.cookieconsent-optout-marketing,.cookieconsent-optout{display:none;}</style></head>
 
-        <div class="logo">
-          {/* <img class="logo-img" src="images/logo.png" alt=""> */}
-          <span class="logo-lnk">Paula <br />Villalobos</span>
-        </div>
-
-        {/* <a href="#" class="menu-btn"><span></span></a> */}
-
-          <span class="animated-button"><span><em>D</em><em>o</em><em>w</em><em>n</em><em>l</em><em>o</em><em>a</em><em>d</em><em> </em><em>C</em><em>V</em></span></span>
-          <i class="icon fas fa-download"></i>
-
-        <div class="header-sidebar">
-
-          <div class="top-menu">
-            <div class="top-menu-nav">
-              <div class="menu-topmenu-container">
-                <ul class="menu">
-                  <li class="menu-item menu-item-has-children current-menu-item">
-                    <a href="#section-started">
-                      <span class="animated-button"><span><em>H</em><em>o</em><em>m</em><em>e</em></span></span>
-                    </a>
-                    <ul class="sub-menu">
-                      <li class="menu-item"><a href="index.html">Home 1</a></li>
-                      <li class="menu-item"><a href="index-2.html">Home 2</a></li>
-                      <li class="menu-item"><a href="index-3.html">Home 3</a></li>
-                      <li class="menu-item"><a href="index-slider.html">Home Slider</a></li>
-                      <li class="menu-item"><a href="index-video.html">Home Video</a></li>
-                    </ul>
-                  </li>
-                  <li class="menu-item">
-                    <a href="#section-about">
-                      <span class="animated-button"><span><em>A</em><em>b</em><em>o</em><em>u</em><em>t</em></span></span>
-                    </a>
-                  </li>
-                  <li class="menu-item">
-                    <a href="#section-experience">
-                      <span class="animated-button"><span><em>R</em><em>e</em><em>s</em><em>u</em><em>m</em><em>e</em></span></span>
-                    </a>
-                  </li>
-                  <li class="menu-item">
-                    <a href="#section-portfolio">
-                      <span class="animated-button"><span><em>P</em><em>o</em><em>r</em><em>t</em><em>f</em><em>o</em><em>l</em><em>i</em><em>o</em></span></span>
-                    </a>
-                  </li>
-                  <li class="menu-item">
-                    <a href="#section-contacts">
-                      <span class="animated-button"><span><em>C</em><em>o</em><em>n</em><em>t</em><em>a</em><em>c</em><em>t</em></span></span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </header>
-
       <div class="wrapper">
 
         <div class="background-bg">

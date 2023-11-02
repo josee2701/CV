@@ -19,42 +19,43 @@ function Navbar() {
     }, []);
 
     return (
-        <nav style={navbarStyle}>
-            <div className="logo">
-                <a href="#">
-                    <img className="logo-img" src={logo} alt="Logo" />
-                    <span className="logo-lnk">Jose <br />Campos</span>
-                </a>
-            </div>
-            <div >
-                <div className="boton">
-                    <a href="#section-started">
-                        <button
-                            style={
-                                hoveredButton === 'HOME'
-                                    ? { ...buttonStyle, color: 'red', transform: 'translateY(-5px)' }
-                                    : buttonStyle
-                            }
-                            onMouseEnter={() => setHoveredButton('HOME')}
-                            onMouseLeave={() => setHoveredButton(null)}
-                        >
-                            HOME
-                        </button>
+        <nav >
+            <div className='header'>
+                <div className="logo">
+                    <a href="#">
+                        <img className="logo-img" src={logo} alt="Logo" />
+                        <span className="logo-lnk">Jose <br />Campos</span>
                     </a>
-                    <a href="#section-about">
-                        <button
-                            style={
-                                hoveredButton === 'ABOUT'
-                                    ? { ...buttonStyle, color: 'red', transform: 'translateY(-5px)' }
-                                    : buttonStyle
-                            }
-                            onMouseEnter={() => setHoveredButton('ABOUT')}
-                            onMouseLeave={() => setHoveredButton(null)}
-                        >
-                            ABOUT
-                        </button>
-                    </a>
-                    <a href="#section-resumen">
+                </div>
+                <div className='top-menu' >
+                    <div className="menu">
+                        <a href="#section-started">
+                            <button
+                                style={
+                                    hoveredButton === 'HOME'
+                                        ? { ...buttonStyle, color: 'red', transform: 'translateY(-5px)' }
+                                        : buttonStyle
+                                }
+                                onMouseEnter={() => setHoveredButton('HOME')}
+                                onMouseLeave={() => setHoveredButton(null)}
+                            >
+                                HOME
+                            </button>
+                        </a>
+                        <a href="#section-about">
+                            <button
+                                style={
+                                    hoveredButton === 'ABOUT'
+                                        ? { ...buttonStyle, color: 'red', transform: 'translateY(-5px)' }
+                                        : buttonStyle
+                                }
+                                onMouseEnter={() => setHoveredButton('ABOUT')}
+                                onMouseLeave={() => setHoveredButton(null)}
+                            >
+                                ABOUT
+                            </button>
+                        </a>
+                        {/* <a href="#section-resumen">
                         <button
                             style={hoveredButton === 'RESUME' ? { ...buttonStyle, color: 'red', transform: 'translateY(-5px)' } : buttonStyle}
                             onMouseEnter={() => setHoveredButton('RESUME')}
@@ -90,37 +91,14 @@ function Navbar() {
                         onMouseLeave={() => setDownloadButtonHovered(false)}
                     >
                         DOWNLOAD CV <i className="fa fa-download"></i>
-                    </button>
+                    </button> */}
+                    </div>
                 </div>
             </div>
-
         </nav>
-
     );
 }
 
-// ... (resto del código sin cambios)
-
-
-const navbarStyle = {
-    padding: "0 10px 9px 50px", // Reducir el valor del padding en el lado izquierdo
-    position: "fixed",
-    insetInlineStart: "50px", // Cambiar de "inset-inline-start" a "insetInlineStart"
-    insetInlineEnd: "50px", // Cambiar de "inset-inline-end" a "insetInlineEnd"
-    insetBlockStart: "40px", // Cambiar de "inset-block-start" a "insetBlockStart"
-    blockSize: "80px", // Cambiar de "block-size" a "blockSize"
-    zIndex: 100,
-    background: "#333",
-    borderRadius: "80px",
-    MozBorderRadius: "80px",
-    WebkitBorderRadius: "80px",
-    KhtmlBorderRadius: "80px",
-    transition: "all 0.7s cubic-bezier(0.165, 0.85, 0.45, 1)",
-    MozTransition: "all 0.7s cubic-bezier(0.165, 0.85, 0.45, 1)",
-    WebkitTransition: "all 0.7s cubic-bezier(0.165, 0.85, 0.45, 1)",
-    OTransition: "all 0.7s cubic-bezier(0.165, 0.85, 0.45, 1)",
-
-};
 
 const buttonStyle = {
     backgroundColor: 'transparent',
@@ -154,7 +132,6 @@ const downloadButtonStyle = {
 };
 
 const navbarMobileStyle = {
-    ...navbarStyle,
     flexDirection: 'column',
     padding: '10px',
     display: 'flex',
