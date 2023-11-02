@@ -3,9 +3,6 @@ import React, { useEffect, useState } from 'react';
 import logo from '../assets/Gallery/Logo_personal.png';
 import '../assets/css/Navbar.css';
 
-
-
-
 function Navbar() {
     const [hoveredButton, setHoveredButton] = useState(null);
     const [isDownloadButtonHovered, setDownloadButtonHovered] = useState(false);
@@ -26,84 +23,79 @@ function Navbar() {
             <div className="logo">
                 <a href="#">
                     <img className="logo-img" src={logo} alt="Logo" />
-                    <span className="logo-lnk">Jose <br/>Campos</span>
+                    <span className="logo-lnk">Jose <br />Campos</span>
                 </a>
             </div>
-            {/* <div style={logoContainer}>
-                <img src={logo} alt="Logo" style={logoStyle} />
-                <h3 style={titleStyle}>Jose <br//> Campos</h3>
-            </div> */}
             <div >
                 <div className="boton">
-                <a href="#section-profile">
+                    <a href="#section-started">
+                        <button
+                            style={
+                                hoveredButton === 'HOME'
+                                    ? { ...buttonStyle, color: 'red', transform: 'translateY(-5px)' }
+                                    : buttonStyle
+                            }
+                            onMouseEnter={() => setHoveredButton('HOME')}
+                            onMouseLeave={() => setHoveredButton(null)}
+                        >
+                            HOME
+                        </button>
+                    </a>
+                    <a href="#section-about">
+                        <button
+                            style={
+                                hoveredButton === 'ABOUT'
+                                    ? { ...buttonStyle, color: 'red', transform: 'translateY(-5px)' }
+                                    : buttonStyle
+                            }
+                            onMouseEnter={() => setHoveredButton('ABOUT')}
+                            onMouseLeave={() => setHoveredButton(null)}
+                        >
+                            ABOUT
+                        </button>
+                    </a>
+                    <a href="#section-resumen">
+                        <button
+                            style={hoveredButton === 'RESUME' ? { ...buttonStyle, color: 'red', transform: 'translateY(-5px)' } : buttonStyle}
+                            onMouseEnter={() => setHoveredButton('RESUME')}
+                            onMouseLeave={() => setHoveredButton(null)}
+                        >
+                            RESUME
+                        </button>
+                    </a>
+                    <a href="#section-portafolio">
+
+                        <button
+                            style={hoveredButton === 'PORTFOLIO' ? { ...buttonStyle, color: 'red', transform: 'translateY(-5px)' } : buttonStyle}
+                            onMouseEnter={() => setHoveredButton('PORTFOLIO')}
+                            onMouseLeave={() => setHoveredButton(null)}
+                        >
+                            PORTFOLIO
+                        </button>
+                    </a>
+                    <a href="#section-contacto">
+
+                        <button
+
+                            style={hoveredButton === 'CONTACT' ? { ...buttonStyle, color: 'red', transform: 'translateY(-5px)' } : buttonStyle}
+                            onMouseEnter={() => setHoveredButton('CONTACT')}
+                            onMouseLeave={() => setHoveredButton(null)}
+                        >
+                            CONTACT
+                        </button>
+                    </a>
                     <button
-                        style={
-                        hoveredButton === 'HOME'
-                            ? { ...buttonStyle, color: 'red', transform: 'translateY(-5px)' }
-                            : buttonStyle
-                        }
-                        onMouseEnter={() => setHoveredButton('HOME')}
-                        onMouseLeave={() => setHoveredButton(null)}
+                        style={isDownloadButtonHovered ? { ...downloadButtonStyle, backgroundColor: '#777' } : downloadButtonStyle}
+                        onMouseEnter={() => setDownloadButtonHovered(true)}
+                        onMouseLeave={() => setDownloadButtonHovered(false)}
                     >
-                        HOME
+                        DOWNLOAD CV <i className="fa fa-download"></i>
                     </button>
-                </a>
-                <a href="#section-about">
-                    <button
-                        style={
-                        hoveredButton === 'ABOUT'
-                            ? { ...buttonStyle, color: 'red', transform: 'translateY(-5px)' }
-                            : buttonStyle
-                        }
-                        onMouseEnter={() => setHoveredButton('ABOUT')}
-                        onMouseLeave={() => setHoveredButton(null)}
-                    >
-                        ABOUT
-                    </button>
-                </a>
-                <a href="#section-resumen">
-
-                <button 
-                    style={hoveredButton === 'RESUME' ? {...buttonStyle, color: 'red', transform: 'translateY(-5px)'} : buttonStyle} 
-                    onMouseEnter={() => setHoveredButton('RESUME')} 
-                    onMouseLeave={() => setHoveredButton(null)}
-                >
-                    RESUME
-                </button>
-                </a>
-                <a href="#section-portafolio">
-
-                <button 
-                    style={hoveredButton === 'PORTFOLIO' ? {...buttonStyle, color: 'red', transform: 'translateY(-5px)'} : buttonStyle} 
-                    onMouseEnter={() => setHoveredButton('PORTFOLIO')} 
-                    onMouseLeave={() => setHoveredButton(null)}
-                >
-                    PORTFOLIO
-                </button>
-                </a>
-                <a href="#section-contacto">
-
-                <button 
-                
-                    style={hoveredButton === 'CONTACT' ? {...buttonStyle, color: 'red', transform: 'translateY(-5px)'} : buttonStyle} 
-                    onMouseEnter={() => setHoveredButton('CONTACT')} 
-                    onMouseLeave={() => setHoveredButton(null)}
-                >
-                    CONTACT
-                </button>
-                </a>
-                <button 
-                    style={isDownloadButtonHovered ? {...downloadButtonStyle, backgroundColor: '#777'} : downloadButtonStyle} 
-                    onMouseEnter={() => setDownloadButtonHovered(true)} 
-                    onMouseLeave={() => setDownloadButtonHovered(false)}
-                >
-                    DOWNLOAD CV <i className="fa fa-download"></i>
-                </button>
                 </div>
             </div>
-            
+
         </nav>
-        
+
     );
 }
 
@@ -127,18 +119,10 @@ const navbarStyle = {
     MozTransition: "all 0.7s cubic-bezier(0.165, 0.85, 0.45, 1)",
     WebkitTransition: "all 0.7s cubic-bezier(0.165, 0.85, 0.45, 1)",
     OTransition: "all 0.7s cubic-bezier(0.165, 0.85, 0.45, 1)",
-    
-  };
-  
-//   const buttonContainer = {
-//     display: 'flex',
-//     gap: '15px',
-//     position: "relative",
-//     float: "left",
-//     blockSize: "80px", // Cambiar de "block-size" a "blockSize"
-//   };
-  
-  const buttonStyle = {
+
+};
+
+const buttonStyle = {
     backgroundColor: 'transparent',
     border: 'none',
     color: '#fff',
@@ -148,11 +132,11 @@ const navbarStyle = {
     transition: 'color 0.3s, transform 0.3s',
     transform: 'translateY(0)',
     '&:hover': {
-      transform: 'translateY(-5px)'
+        transform: 'translateY(-5px)'
     }
-  };
-  
-  const downloadButtonStyle = {
+};
+
+const downloadButtonStyle = {
     ...buttonStyle,
     backgroundColor: '#555',
     border: '1px solid #fff',
@@ -167,22 +151,14 @@ const navbarStyle = {
     WebkitTransform: 'translateY(0)',
     MozTransform: 'translateY(0)',
     OTransform: 'translateY(0)',
-  };
-  
-  const navbarMobileStyle = {
+};
+
+const navbarMobileStyle = {
     ...navbarStyle,
     flexDirection: 'column',
     padding: '10px',
     display: 'flex',
-  };
-  
-  // eslint-disable-next-line no-unused-vars
-//   const buttonContainerMobile = {
-//     ...buttonContainer,
-//     flexDirection: 'column',
-//     alignItems: 'center',
-//     gap: '5px',
-//   };
-  
+};
+
 
 export default Navbar;

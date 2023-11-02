@@ -13,21 +13,14 @@ function App() {
       <div className="combined-profile-container">
         <Home />
         <div className="profile-about-section">
-          <div class="section profile" id="section-profile">
             <Profile />
-          </div>
-          <div id="section-about">
             <About />
-          </div><div class="section about" id="section-about">
             <About />
-          </div><div class="section about" id="section-about">
             <About />
-          </div><div class="section about" id="section-about">
             <About />
           </div>
         </div>
       </div>
-    </div>
   );
 }
 

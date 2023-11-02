@@ -10,6 +10,162 @@ function todo() {
     <><div class="container">
 
       <header class="header fixed">
+      <head><style data-merge-styles="true"></style>
+    <style data-merge-styles="true"></style><style data-merge-styles="true"></style><meta charset="utf-8">
+    <link rel="dns-prefetch" href="//s3.envato.com">
+<link rel="preload" href="https://public-assets.envato-static.com/assets/generated_sprites/logos-20f56d7ae7a08da2c6698db678490c591ce302aedb1fcd05d3ad1e1484d3caf9.png" as="image">
+<link rel="preload" href="https://public-assets.envato-static.com/assets/generated_sprites/common-5af54247f3a645893af51456ee4c483f6530608e9c15ca4a8ac5a6e994d9a340.png" as="image">
+
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Myour - CV/Resume Template Preview - ThemeForest</title>
+    <meta name="description" content="&amp;lt;p&amp;gt;&amp;lt;a href=&amp;quot;https://themeforest.net/item/myour-one-page-resume-wordpress-theme/2731...">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+    <meta name="turbo-visit-control" content="reload">
+
+    <link rel="stylesheet" media="all" href="https://public-assets.envato-static.com/assets/market/core/index-00ad47df0491a88d8ee7580820c200b2d57bca4af355868798a4d283578ac8f6.css">
+    <link rel="stylesheet" media="all" href="https://public-assets.envato-static.com/assets/market/pages/preview/index-c20c294967c4ed0be90d33e130e591a57859fccaebd0a19bf00bf499d001afc3.css">
+
+      <link rel="apple-touch-icon-precomposed" type="image/x-icon" href="https://public-assets.envato-static.com/icons/themeforest.net/apple-touch-icon-72x72-precomposed.png" sizes="72x72">
+  <link rel="apple-touch-icon-precomposed" type="image/x-icon" href="https://public-assets.envato-static.com/icons/themeforest.net/apple-touch-icon-114x114-precomposed.png" sizes="114x114">
+  <link rel="apple-touch-icon-precomposed" type="image/x-icon" href="https://public-assets.envato-static.com/icons/themeforest.net/apple-touch-icon-144x144-precomposed.png" sizes="144x144">
+<link rel="apple-touch-icon-precomposed" type="image/x-icon" href="https://public-assets.envato-static.com/icons/themeforest.net/apple-touch-icon-precomposed.png">
+
+    <script type="text/javascript" async="" src="https://www.google-analytics.com/gtm/js?id=GTM-5VPWWP&amp;t=m&amp;cid=1937597553.1698777402" nonce="QRB/Gj0G/YTtOjtkWlMG1Q=="></script><script type="text/javascript" async="" src="https://www.google-analytics.com/plugins/ua/linkid.js" nonce="QRB/Gj0G/YTtOjtkWlMG1Q=="></script><script type="text/javascript" async="" src="https://www.google-analytics.com/plugins/ua/ec.js" nonce="QRB/Gj0G/YTtOjtkWlMG1Q=="></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script src="https://public-assets.envato-static.com/assets/market/pages/full_screen_preview/index-7f7b99e2fce428dfe1ffa7553744b98eb6c004f82f8f6656439c2f7c74d0a4dd.js" nonce="QRB/Gj0G/YTtOjtkWlMG1Q=="></script>
+
+    <script nonce="QRB/Gj0G/YTtOjtkWlMG1Q==">
+//<![CDATA[
+      //function to fix height of iframe!
+      var calcHeight = function() {
+        var headerDimensions = $('.preview__header').height();
+        $('.full-screen-preview__frame').height($(window).height() - headerDimensions);
+      }
+
+      $(document).ready(function() {
+        calcHeight();
+      });
+
+      $(window).resize(function() {
+        calcHeight();
+      }).load(function() {
+        calcHeight();
+      });
+
+//]]>
+</script>
+    
+  <style data-jss="" data-meta="MuiDialog">
+@media print {
+  .MuiDialog-root {
+    position: absolute !important;
+  }
+}
+.MuiDialog-scrollPaper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.MuiDialog-scrollBody {
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: center;
+}
+.MuiDialog-scrollBody:after {
+  width: 0;
+  height: 100%;
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+}
+.MuiDialog-container {
+  height: 100%;
+  outline: 0;
+}
+@media print {
+  .MuiDialog-container {
+    height: auto;
+  }
+}
+.MuiDialog-paper {
+  margin: 32px;
+  position: relative;
+  overflow-y: auto;
+}
+@media print {
+  .MuiDialog-paper {
+    box-shadow: none;
+    overflow-y: visible;
+  }
+}
+.MuiDialog-paperScrollPaper {
+  display: flex;
+  max-height: calc(100% - 64px);
+  flex-direction: column;
+}
+.MuiDialog-paperScrollBody {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+.MuiDialog-paperWidthFalse {
+  max-width: calc(100% - 64px);
+}
+.MuiDialog-paperWidthXs {
+  max-width: 444px;
+}
+@media (max-width:507.95px) {
+  .MuiDialog-paperWidthXs.MuiDialog-paperScrollBody {
+    max-width: calc(100% - 64px);
+  }
+}
+.MuiDialog-paperWidthSm {
+  max-width: 600px;
+}
+@media (max-width:663.95px) {
+  .MuiDialog-paperWidthSm.MuiDialog-paperScrollBody {
+    max-width: calc(100% - 64px);
+  }
+}
+.MuiDialog-paperWidthMd {
+  max-width: 960px;
+}
+@media (max-width:1023.95px) {
+  .MuiDialog-paperWidthMd.MuiDialog-paperScrollBody {
+    max-width: calc(100% - 64px);
+  }
+}
+.MuiDialog-paperWidthLg {
+  max-width: 1280px;
+}
+@media (max-width:1343.95px) {
+  .MuiDialog-paperWidthLg.MuiDialog-paperScrollBody {
+    max-width: calc(100% - 64px);
+  }
+}
+.MuiDialog-paperWidthXl {
+  max-width: 1920px;
+}
+@media (max-width:1983.95px) {
+  .MuiDialog-paperWidthXl.MuiDialog-paperScrollBody {
+    max-width: calc(100% - 64px);
+  }
+}
+.MuiDialog-paperFullWidth {
+  width: calc(100% - 64px);
+}
+.MuiDialog-paperFullScreen {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  max-width: 100%;
+  max-height: none;
+  border-radius: 0;
+}
+.MuiDialog-paperFullScreen.MuiDialog-paperScrollBody {
+  margin: 0;
+  max-width: 100%;
+}
+</style><style type="text/css" id="CookieConsentStateDisplayStyles">.cookieconsent-optin,.cookieconsent-optin-preferences,.cookieconsent-optin-statistics,.cookieconsent-optin-marketing{display:block;display:initial;}.cookieconsent-optout-preferences,.cookieconsent-optout-statistics,.cookieconsent-optout-marketing,.cookieconsent-optout{display:none;}</style></head>
 
         <div class="logo">
           {/* <img class="logo-img" src="images/logo.png" alt=""> */}
