@@ -1,0 +1,106 @@
+
+-------------------------------
+
+.background-bg {
+	inset-block-start: 0;
+	inset-inline-start: 0;
+	inline-size: 1%;
+	block-size: 100%;
+}
+
+
+.background-filter {
+	position: absolute;
+	inset-block-start: 0;
+	inset-inline-start: 0;
+	inline-size: 50%;
+	block-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+
+.background-filter .background-img {
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	mix-blend-mode: luminosity;
+}
+
+.background-filter.gradient:after {
+	content: '';
+	position: absolute;
+	inset-inline-start: 0;
+	inset-block-start: 0;
+	inline-size: 100%;
+	block-size: 100%;
+	background: -moz-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.5) 0%, #373b40 90%);
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.5) 0%, #373b40 90%);
+	background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.5) 0%, #373b40 90%);
+}
+
+.background-filter.gradient .background-img {
+	-webkit-filter: none;
+	filter: none;
+	mix-blend-mode: unset;
+}
+
+.background-filter.circle {
+	clip-path: circle(75% at 10% 45%);
+	-webkit-clip-path: circle(75% at 10% 45%);
+}
+
+.background-filter.circle .background-img {
+	-webkit-filter: none;
+	filter: none;
+	mix-blend-mode: unset;
+}
+
+
+.background-img {
+	position: absolute;
+	inset-inline-start: 0;
+	inset-block-start: 0;
+	inline-size: 100%;
+	block-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+.profileContainer {
+	position: fixed;
+  }
+
+
+@media (max-width: 1199px) {
+	
+	.background-filter {
+		position: absolute;
+		inset-block-start: 0;
+		inset-inline-start: 0;
+		inline-size: 110%;
+		block-size: 55%;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+	}
+	.background-img {
+		position: absolute;
+		inset-inline-start: 0;
+		inset-block-start: 0;
+		inline-size: 100%;
+		background-position: top center;
+		background-size: cover auto;
+	}
+
+	.background-filter.circle {
+		clip-path: circle(100% at 100% 0%);
+		-webkit-clip-path: circle(75% at 50% 5%);
+	}
+
+}
+@media (max-width: 720px) {
+		.background-bg {
+			block-size: 450px;
+		}
+
+	}
