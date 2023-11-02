@@ -2,6 +2,7 @@
   "name": "my-frontend",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://josee2701.github.io/CV/build",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
