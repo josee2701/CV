@@ -23,7 +23,7 @@ function Navbar() {
             <div className='header'>
                 <div className="logo">
                     <a href="#">
-                        <img className="logo-img" src={logo} alt="Logo" />
+                        <div className="logo-img" style={{ backgroundImage: 'url("Logo_personal.png")' }}></div>
                         <span className="logo-lnk">Jose <br />Campos</span>
                     </a>
                 </div>
