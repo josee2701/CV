@@ -15,7 +15,8 @@ body {
   align-items: start;
   flex-direction: column;
 }
-.profile-about-section{
+
+.profile-section {
   inline-size: 100%;
   max-inline-size: 1200px;
   margin: 0 auto;
@@ -33,12 +34,15 @@ body {
   margin-block-end: 20px;
 }
 
-.profile, .about {
+.profile,
+.about,
+.resume {
   padding: 20px;
   border-radius: 8px;
 }
 
-.profile h1, .about h3 {
+.profile h1,
+.about h3 {
   font-size: 24px;
   color: #333;
   margin-block-start: 0;

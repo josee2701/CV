@@ -1,5 +1,6 @@
 import React from 'react';
 import '../assets/css/About.css';
+import '../assets/css/General.css';
 
 function About(props) {
     return (
@@ -35,39 +36,37 @@ function About(props) {
                     </ul>
                 </div>
 
-                <div className="section service" id="section-services">
-                    <div className="content">
-                        <div className="titles">
-                            <div className="title">Services</div>
-                        </div>
-
-                        <div className="service-items">
-                            <div className="service-col">
-                                <div className="service-item">
-                                    <div className="icon"><i className="fa-solid fa-laptop-code"></i></div>
-                                    <div className="name">Desarrollo Web</div>
-                                    <div className="single-post-text">
-                                        <p>
-                                            Economics is a social science concerned with the production, consumption of goods and services.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="service-col">
-                                <div className="service-item">
-                                    <div className="icon"><i className="fa-solid fa-code" ></i></div>
-                                    <div className="name">Desarrollo Backend</div>
-                                    <div className="single-post-text">
-                                        <p>
-                                            Advertising Management though is a complex process of employing various media to sell a product or service.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="clear"></div>
+                <div className="content">
+                    <div className="titles">
+                        <div className="title">Services</div>
                     </div>
+
+                    <div className="service-items">
+                        <div className="service-col">
+                            <div className="service-item">
+                                <div className="icon"><i className="fa-solid fa-laptop-code"></i></div>
+                                <div className="name">Desarrollo Web</div>
+                                <div className="single-post-text">
+                                    <p>
+                                        Economics is a social science concerned with the production, consumption of goods and services.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="service-col">
+                            <div className="service-item">
+                                <div className="icon"><i className="fa-solid fa-code" ></i></div>
+                                <div className="name">Desarrollo Backend</div>
+                                <div className="single-post-text">
+                                    <p>
+                                        Advertising Management though is a complex process of employing various media to sell a product or service.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="clear"></div>
                 </div>
                 <div className="clear"></div>
             </div>

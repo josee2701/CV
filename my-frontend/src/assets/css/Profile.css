@@ -1,56 +1,45 @@
-
-.section {
-    position: relative;
-    overflow: hidden;
-    padding-inline-start: 6%;
-    padding-inline-end: 3%;
-    padding-block-start: 130px;
-    padding-block-end: 123px;
-    z-index: 12;
-}
-
 section.started {
     display: flex;
-	margin: 0;
-	padding-block-start: 0;
-	padding-inline-start: 0;
-	padding-block-end: 0;
-	position: relative;
-	overflow: visible;
-	block-size: 100vh;
-	z-index: 11;
+    margin: 0;
+    padding-block-start: 0;
+    padding-inline-start: 0;
+    padding-block-end: 0;
+    position: relative;
+    overflow: visible;
+    block-size: 100vh;
+    z-index: 11;
     inset-inline-start: 0;
 }
 
 .section.started .h-title {
-	margin: 15vw 0 0 25vw;
-	padding: 4.2vw;
-	font-size: 3.2vw;
-	line-height: 1.2;
-	font-weight: 800;
-	color: #FFF;
-	background: #213249;
-	word-break: break-word;
-	-ms-word-wrap: break-word;
-	word-wrap: break-word;
-	border-radius: 264px;
-	-moz-border-radius: 264px;
-	-webkit-border-radius: 264px;
-	-khtml-border-radius: 264px;
+    margin: 15vw 0 0 25vw;
+    padding: 4.2vw;
+    font-size: 3.2vw;
+    line-height: 1.2;
+    font-weight: 800;
+    color: #FFF;
+    background: #213249;
+    word-break: break-word;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+    border-radius: 264px;
+    -moz-border-radius: 264px;
+    -webkit-border-radius: 264px;
+    -khtml-border-radius: 264px;
 }
 
 
 .section.started .started-content .h-subtitles {
-	margin: 0 0 60px 39vw;
-	block-size: 18px;
-	font-size: 26px;
+    margin: 0 0 60px 39vw;
+    block-size: 18px;
+    font-size: 26px;
     color: #0c042b;
 }
 
 .section.started .started-content .h-text {
-	margin: 0 0 28px 39vw;
-	font-size: 18px;
-	color: #ffffff;
+    margin: 0 0 28px 39vw;
+    font-size: 18px;
+    color: #ffffff;
 }
 
 /* Regla @media para dispositivos con ancho máximo de 1199px */
@@ -58,15 +47,18 @@ section.started {
     .section {
         padding-block-end: 155px;
     }
+
     .section.started .h-title {
         margin: 48vw 0 0 13vw;
         padding: 4.2vw;
         font-size: 6.2vw;
     }
+
     .section.started .started-content .h-subtitles {
         margin: 0 0 53px 22vw;
         font-size: 24px;
     }
+
     .section.started .started-content .h-text {
         margin: 0 0 27px 9vw;
     }
@@ -80,15 +72,18 @@ section.started {
         block-size: 95vw;
         inset-inline-start: 33;
     }
+
     .section.started .h-title {
         margin: -31vw 0 0 25vw;
         padding: 6.2vw;
         font-size: 5.2vw;
     }
+
     .section.started .started-content .h-subtitles {
         margin: 0 0 52px 26vw;
         block-size: 22px;
     }
+
     .section.started .started-content .h-text {
         margin: 0 0 16px 8vw;
     }

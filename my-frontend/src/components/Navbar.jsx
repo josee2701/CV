@@ -55,7 +55,7 @@ function Navbar() {
                                 INFO
                             </button>
                         </a>
-                        {/* <a href="#section-resumen">
+                        { <a href="#section-resumen">
                         <button
                             style={hoveredButton === 'RESUME' ? { ...buttonStyle, color: 'red', transform: 'translateY(-5px)' } : buttonStyle}
                             onMouseEnter={() => setHoveredButton('RESUME')}
@@ -64,6 +64,7 @@ function Navbar() {
                             RESUME
                         </button>
                     </a>
+                    /*
                     <a href="#section-portafolio">
 
                         <button
