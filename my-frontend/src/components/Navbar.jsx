@@ -23,7 +23,7 @@ function Navbar() {
             <div className='header'>
                 <div className="logo">
                     <a href="#">
-                        <div className="logo-img" style={{ backgroundImage: 'url("Logo_personal.png")' }}></div>
+                        <img className="logo-img" src={logo} alt="Logo" />
                         <span className="logo-lnk">Jose <br />Campos</span>
                     </a>
                 </div>
@@ -39,7 +39,7 @@ function Navbar() {
                                 onMouseEnter={() => setHoveredButton('HOME')}
                                 onMouseLeave={() => setHoveredButton(null)}
                             >
-                                HOME
+                                INICIO
                             </button>
                         </a>
                         <a href="#section-about">
@@ -52,7 +52,7 @@ function Navbar() {
                                 onMouseEnter={() => setHoveredButton('ABOUT')}
                                 onMouseLeave={() => setHoveredButton(null)}
                             >
-                                ABOUT
+                                INFO
                             </button>
                         </a>
                         {/* <a href="#section-resumen">

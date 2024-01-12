@@ -12,15 +12,12 @@ function App() {
       <Navbar />
       <div className="combined-profile-container">
         <Home />
+      </div>
         <div className="profile-about-section">
             <Profile />
             <About />
-            <About />
-            <About />
-            <About />
           </div>
         </div>
-      </div>
   );
 }
 

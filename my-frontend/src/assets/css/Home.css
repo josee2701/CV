@@ -1,6 +1,4 @@
 
--------------------------------
-
 .background-bg {
 	inset-block-start: 0;
 	inset-inline-start: 0;
@@ -13,7 +11,7 @@
 	position: absolute;
 	inset-block-start: 0;
 	inset-inline-start: 0;
-	inline-size: 50%;
+	inline-size: 45%;
 	block-size: 100%;
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -31,7 +29,7 @@
 	position: absolute;
 	inset-inline-start: 0;
 	inset-block-start: 0;
-	inline-size: 100%;
+	inline-size: 40%;
 	block-size: 100%;
 	background: -moz-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.5) 0%, #373b40 90%);
 	background: -webkit-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.5) 0%, #373b40 90%);

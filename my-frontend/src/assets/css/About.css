@@ -1,12 +1,14 @@
 /* - Section */
+@import '@fortawesome/fontawesome-free/css/all.css';
+
 .section {
-    position: relative;
-    overflow: hidden;
-    padding-inline-start: 6%;
-    padding-inline-end: 3%;
-    padding-block-start: 130px;
-    padding-block-end: 123px;
-    z-index: 12;
+	position: relative;
+	overflow: hidden;
+	padding-inline-start: 6%;
+	padding-inline-end: 3%;
+	padding-block-start: 130px;
+	padding-block-end: 123px;
+	z-index: 12;
 }
 
 .section .titles .title {
@@ -16,27 +18,11 @@
 	line-height: 1.2;
 	color: #ffffff;
 	font-weight: 800;
-    margin: 0 0 0 40vw;
+	margin: 0 0 0 40vw;
 	transition: all 0.3s ease 0s;
 	-moz-transition: all 0.3s ease 0s;
 	-webkit-transition: all 0.3s ease 0s;
 	-o-transition: all 0.3s ease 0s;
-}
-.section.started .h-title {
-	margin: 13vw 0 0 30vw;
-	padding: 4.2vw;
-	font-size: 4.2vw;
-	line-height: 1.2;
-	font-weight: 800;
-	color: #FFF;
-	background: #492121;
-	word-break: break-word;
-	-ms-word-wrap: break-word;
-	word-wrap: break-word;
-	border-radius: 264px;
-	-moz-border-radius: 264px;
-	-webkit-border-radius: 264px;
-	-khtml-border-radius: 264px;
 }
 
 .section .titles .subtitle {
@@ -45,13 +31,70 @@
 	color: #0c042b;
 	font-weight: 600;
 	text-transform: uppercase;
-    margin: 20px 0 0 40vw;
+	margin-inline-start: 45%;
+
 }
 
 .info-list {
-	margin-block-end: 20px;
-    
+	margin-inline-start: 45%;
+	color: #ffffff;
+
 }
+
+.info-list ul li strong {
+	display: inline-block;
+	vertical-align: top;
+	width: 90px;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: #0c042b;
+}
+
+.single-post-text {
+	margin-inline-start: 45%;
+	color: #ffffff;
+	/* Ajusta el valor según sea necesario */
+}
+
+
+.service-items {
+	margin: 0 -10px;
+	/* Ajusta el valor según sea necesario */
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.service-items .service-col {
+	margin-bottom: 20px;
+	/* Ajusta el valor según sea necesario */
+	padding: 0 10px;
+	/* Ajusta el valor según sea necesario */
+	flex: 1 0 50%;
+	/* Divide en dos columnas */
+}
+
+
+.service-item .icon {
+	margin-bottom: 10px;
+	/* Ajusta el valor según sea necesario */
+	font-size: 32px;
+	block-size: 32px;
+	color: #68e0cf;
+	margin-inline-start: 45%;
+}
+
+.service-item .name {
+	margin: 0;
+	/* Ajusta el valor según sea necesario */
+	font-size: 18px;
+	color: #FFF;
+	font-weight: 800;
+	margin-inline-start: 45%;
+
+
+
+}
+
 
 
 
@@ -67,10 +110,9 @@
 	}
 
 }
+
 /* ... (otros estilos) */
 
-.single-post-text {
-    margin-inline-start: 40px; /* Ajusta el valor según sea necesario */
-}
+
 
 /* ... (otros estilos) */
