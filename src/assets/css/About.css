@@ -70,21 +70,70 @@
 }
 
 
-@media (max-inline-size: 720px) {
-	.info-list ul li {
-		inline-size: 100%;
+/* Regla @media para dispositivos con ancho máximo de 1199px */
+@media (max-width: 1199px) {
+
+	.section .titles .title {
+		margin-block-end: 10px;
+		font-size: 55px;
+		line-height: 1.2;
+		color: #ffffff;
+		font-weight: 800;
+		transition: all 0.3s ease 0s;
+		-moz-transition: all 0.3s ease 0s;
+		-webkit-transition: all 0.3s ease 0s;
+		-o-transition: all 0.3s ease 0s;
 	}
 
 
-	.info-list ul li strong {
-		margin-inline-end: 15px;
-		inline-size: auto;
+	.section.started .h-title {
+		padding: 4.2vw;
+		font-size: 6.2vw;
 	}
 
+	.section.started .started-content .h-subtitles {
+		margin: 0 0 53px 22vw;
+		font-size: 24px;
+	}
+
+	.section.started .started-content .h-text {
+		margin: 0 0 27px 9vw;
+	}
 }
 
-/* ... (otros estilos) */
+/* Regla @media para dispositivos con ancho máximo de 720px */
+@media (max-width: 720px) {
+	.section.started {
+		padding-inline-start: 2px;
+		padding-block-end: 21px;
+		block-size: 95vw;
+		inset-inline-start: 33;
+	}
 
+	.section .titles .title {
+		margin-block-end: 10px;
+		max-inline-size: 70%;
+		font-size: 55px;
+		line-height: 1.2;
+		color: #ffffff;
+		font-weight: 800;
+		transition: all 0.3s ease 0s;
+		-moz-transition: all 0.3s ease 0s;
+		-webkit-transition: all 0.3s ease 0s;
+		-o-transition: all 0.3s ease 0s;
+	}
 
+	.section.started .h-title {
+		padding: 6.2vw;
+		font-size: 5.2vw;
+	}
 
-/* ... (otros estilos) */
+	.section.started .started-content .h-subtitles {
+		margin: 0 0 52px 26vw;
+		block-size: 22px;
+	}
+
+	.section.started .started-content .h-text {
+		margin: 0 0 16px 8vw;
+	}
+}

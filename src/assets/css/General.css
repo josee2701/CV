@@ -29,3 +29,19 @@
     margin-inline-start: 45%;
 
 }
+
+/* Regla @media para dispositivos con ancho máximo de 1199px */
+@media (max-width: 1199px) {
+    .section .titles .title {
+        margin-block-end: 10px;
+        font-size: 55px;
+        line-height: 1.2;
+        color: #ffffff;
+        font-weight: 800;
+        transition: all 0.3s ease 0s;
+        -moz-transition: all 0.3s ease 0s;
+        -webkit-transition: all 0.3s ease 0s;
+        -o-transition: all 0.3s ease 0s;
+    }
+
+}

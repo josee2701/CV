@@ -44,12 +44,10 @@ section.started {
 
 /* Regla @media para dispositivos con ancho máximo de 1199px */
 @media (max-width: 1199px) {
-    .section {
-        padding-block-end: 155px;
-    }
+
 
     .section.started .h-title {
-        margin: 48vw 0 0 13vw;
+        margin: 65vw 0 0 13vw;
         padding: 4.2vw;
         font-size: 6.2vw;
     }
@@ -74,7 +72,7 @@ section.started {
     }
 
     .section.started .h-title {
-        margin: -31vw 0 0 25vw;
+        margin: 19vw 0 0 25vw;
         padding: 6.2vw;
         font-size: 5.2vw;
     }
