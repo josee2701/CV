@@ -16,6 +16,17 @@ body {
   flex-direction: column;
 }
 
+.profile-section {
+  inline-size: 100%;
+  max-inline-size: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+
+}
+
 .App-logo {
   inline-size: 150px;
   block-size: 150px;
@@ -23,13 +34,15 @@ body {
   margin-block-end: 20px;
 }
 
-.profile, .about {
+.profile,
+.about,
+.resume {
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-.profile h1, .about h3 {
+.profile h1,
+.about h3 {
   font-size: 24px;
   color: #333;
   margin-block-start: 0;

@@ -1,0 +1,257 @@
+.header {
+	display: flex;
+	/* Usa flexbox para alinear los elementos */
+	align-items: center;
+	/* Alinea verticalmente los elementos */
+	justify-content: space-between;
+	/* Separa el logo y el menú a ambos extremos */
+	padding: 0 0 0 50px;
+	position: fixed;
+	left: 50px;
+	right: 50px;
+	top: 40px;
+	height: 80px;
+	z-index: 100;
+	background: #333;
+	border-radius: 80px;
+	transition: all 0.7s cubic-bezier(0.165, 0.85, 0.45, 1);
+}
+
+.menu-btn {
+	display: none;
+	/* oculto por defecto */
+	/* ... otros estilos para el botón ... */
+}
+
+.logo-container {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.header .logo {
+	display: flex;
+	align-items: center;
+	/* Ajusta el padding si es necesario para posicionar correctamente el logo y el texto */
+	padding: 10px;
+}
+
+.header .logo img.logo-img {
+	height: auto;
+	max-height: 70px;
+}
+
+.header .logo .logo-lnk {
+	/* Asegúrate de que el texto esté alineado al lado del logo */
+	margin-left: 10px;
+	/* espacio entre el logo y el texto */
+	font-size: 15px;
+	/* ajusta el tamaño del texto si es necesario */
+	display: flex;
+	align-items: center;
+	/* para alinear verticalmente si es necesario */
+	flex-direction: column;
+	/* para la presentación en dos líneas */
+	justify-content: center;
+	/* centra el contenido si el logo es más alto */
+}
+
+.header .logo-lnk {
+	display: block;
+	color: #FFF;
+	text-align: left;
+	/* Alinea el texto a la izquierda */
+}
+
+.header .download-cv-btn {
+	float: right;
+	margin-top: 8px;
+	margin-right: 8px;
+	border-color: #FFF;
+}
+
+.header .top-menu {
+	float: right;
+	margin-right: 20px;
+	display: flex;
+	align-items: center;
+	color: #FFF;
+}
+
+.nav-button {
+	background-color: transparent;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+	padding: 5px 10px;
+	font-weight: bold;
+	transition: color 0.3s, transform 0.3s;
+}
+
+/* Pseudo-clase para hover */
+.nav-button:hover {
+	color: red;
+	transform: translateY(-5px);
+}
+
+/* Puedes añadir una clase adicional para el estado 'activo' si es necesario */
+.nav-button-active {
+	color: red;
+	transform: translateY(-5px);
+}
+
+.button {
+	background-color: transparent;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+	padding: 5px 10px;
+	font-weight: bold;
+	transition: color 0.3s, transform 0.3s;
+}
+
+.button:hover {
+	color: red;
+	transform: translateY(-5px);
+}
+
+@media (max-width: 1199px) {
+	.header {
+		padding: 0 30px;
+		left: 0;
+		right: 0;
+		top: 20px;
+		background: none;
+		border-radius: 0;
+	}
+
+	.header .logo img.logo-img {
+		margin-right: 30px;
+		max-width: 85px;
+	}
+
+	.header .logo .logo-lnk {
+		font-size: 20px;
+		max-width: 105px;
+		color: #FFF;
+	}
+
+	.logo-container {
+		flex-direction: column;
+		/* Alinea los elementos en columna */
+	}
+
+	.header .logo-lnk {
+		margin-left: 0;
+		/* Remueve el margen lateral para alinear el texto debajo del logo */
+		margin-top: 5px;
+		/* Añade un pequeño espacio encima del texto */
+	}
+
+	.header .download-cv-btn {
+		display: none;
+	}
+
+	.header .top-menu {
+		display: none;
+		/* Ocultar el menú en modo móvil por defecto */
+	}
+
+	.menu-btn {
+		display: inline-block;
+		/* Mostrar botón de menú en móviles */
+		cursor: pointer;
+		float: right;
+		margin-top: 25px;
+		margin-right: 20px;
+		font-size: 40px;
+		/* Ajustar el tamaño aquí */
+	}
+
+	.show-menu .top-menu {
+		display: flex;
+		/* Mostrar menú cuando se haga clic en el botón de menú */
+		flex-direction: column;
+		align-items: flex-start;
+		position: absolute;
+		right: 20px;
+		top: 100px;
+		background-color: #333;
+		border-radius: 10px;
+		padding: 10px;
+		z-index: 100;
+		/* Asegurarse de que el menú esté sobre otros elementos */
+	}
+
+	.nav-button {
+		display: block;
+		/* Hacer que cada botón ocupe una línea */
+		width: 100%;
+		/* Ocupar todo el ancho disponible */
+		text-align: left;
+		/* Alinear el texto a la izquierda */
+		margin-bottom: 10px;
+		/* Espacio entre botones */
+		/* Resto de estilos... */
+	}
+}
+
+
+@media (max-width: 720px) {
+	.header {
+		padding: 0 30px;
+		left: 0;
+		right: 0;
+		top: 20px;
+		background: none;
+		border-radius: 0;
+	}
+
+	.header .logo img.logo-img {
+		margin-right: 30px;
+		max-width: 85px;
+	}
+
+	.header .logo .logo-lnk {
+		font-size: 20px;
+		max-width: 105px;
+	}
+
+	.header .download-cv-btn {
+		display: none;
+	}
+
+	.header .top-menu {
+		display: none;
+		/* Ocultar el menú en modo móvil por defecto */
+	}
+
+	.menu-btn {
+		display: inline-block;
+		/* Mostrar botón de menú en móviles */
+		cursor: pointer;
+		float: right;
+		margin-top: 25px;
+		margin-right: 20px;
+		font-size: 24px;
+		/* Ajustar el tamaño aquí */
+	}
+
+	.show-menu .top-menu {
+		display: flex;
+		/* Mostrar menú cuando se haga clic en el botón de menú */
+		flex-direction: column;
+		align-items: flex-start;
+		position: absolute;
+		right: 20px;
+		top: 100px;
+		background-color: #333;
+		border-radius: 10px;
+		padding: 10px;
+		z-index: 100;
+		/* Asegurarse de que el menú esté sobre otros elementos */
+	}
+
+
+
+}

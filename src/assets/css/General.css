@@ -1,0 +1,47 @@
+.section {
+    position: relative;
+    overflow: hidden;
+    padding-inline-start: 6%;
+    padding-inline-end: 3%;
+    padding-block-start: 130px;
+}
+
+.section .titles .title {
+    margin-block-end: 10px;
+    max-inline-size: 70%;
+    font-size: 55px;
+    line-height: 1.2;
+    color: #ffffff;
+    font-weight: 800;
+    margin: 0 0 0 40vw;
+    transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+}
+
+.section .titles .subtitle {
+    font-size: 14px;
+    line-height: 1.2;
+    color: #0c042b;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-inline-start: 45%;
+
+}
+
+/* Regla @media para dispositivos con ancho máximo de 1199px */
+@media (max-width: 1199px) {
+    .section .titles .title {
+        margin-block-end: 10px;
+        font-size: 55px;
+        line-height: 1.2;
+        color: #ffffff;
+        font-weight: 800;
+        transition: all 0.3s ease 0s;
+        -moz-transition: all 0.3s ease 0s;
+        -webkit-transition: all 0.3s ease 0s;
+        -o-transition: all 0.3s ease 0s;
+    }
+
+}

@@ -1,0 +1,139 @@
+/* - Section */
+@import '@fortawesome/fontawesome-free/css/all.css';
+
+.section .titles .subtitle {
+	font-size: 14px;
+	line-height: 1.2;
+	color: #0c042b;
+	font-weight: 600;
+	text-transform: uppercase;
+	margin-inline-start: 45%;
+
+}
+
+.info-list {
+	margin-inline-start: 45%;
+	color: #ffffff;
+
+}
+
+.info-list ul li strong {
+	display: inline-block;
+	vertical-align: top;
+	width: 90px;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: #0c042b;
+}
+
+.single-post-text {
+	margin-inline-start: 45%;
+	color: #ffffff;
+	/* Ajusta el valor según sea necesario */
+}
+
+
+.service-items {
+	margin: 0 -10px;
+	/* Ajusta el valor según sea necesario */
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.service-items .service-col {
+	margin-bottom: 20px;
+	/* Ajusta el valor según sea necesario */
+	padding: 0 10px;
+	/* Ajusta el valor según sea necesario */
+	flex: 1 0 50%;
+	/* Divide en dos columnas */
+}
+
+
+.service-item .icon {
+	margin-bottom: 10px;
+	/* Ajusta el valor según sea necesario */
+	font-size: 32px;
+	block-size: 32px;
+	color: #0c042b;
+	margin-inline-start: 45%;
+}
+
+.service-item .name {
+	margin: 0;
+	/* Ajusta el valor según sea necesario */
+	font-size: 18px;
+	color: #FFF;
+	font-weight: 800;
+	margin-inline-start: 45%;
+
+}
+
+
+/* Regla @media para dispositivos con ancho máximo de 1199px */
+@media (max-width: 1199px) {
+
+	.section .titles .title {
+		margin-block-end: 10px;
+		font-size: 55px;
+		line-height: 1.2;
+		color: #ffffff;
+		font-weight: 800;
+		transition: all 0.3s ease 0s;
+		-moz-transition: all 0.3s ease 0s;
+		-webkit-transition: all 0.3s ease 0s;
+		-o-transition: all 0.3s ease 0s;
+	}
+
+
+	.section.started .h-title {
+		padding: 4.2vw;
+		font-size: 6.2vw;
+	}
+
+	.section.started .started-content .h-subtitles {
+		margin: 0 0 53px 22vw;
+		font-size: 24px;
+	}
+
+	.section.started .started-content .h-text {
+		margin: 0 0 27px 9vw;
+	}
+}
+
+/* Regla @media para dispositivos con ancho máximo de 720px */
+@media (max-width: 720px) {
+	.section.started {
+		padding-inline-start: 2px;
+		padding-block-end: 21px;
+		block-size: 95vw;
+		inset-inline-start: 33;
+	}
+
+	.section .titles .title {
+		margin-block-end: 10px;
+		max-inline-size: 70%;
+		font-size: 55px;
+		line-height: 1.2;
+		color: #ffffff;
+		font-weight: 800;
+		transition: all 0.3s ease 0s;
+		-moz-transition: all 0.3s ease 0s;
+		-webkit-transition: all 0.3s ease 0s;
+		-o-transition: all 0.3s ease 0s;
+	}
+
+	.section.started .h-title {
+		padding: 6.2vw;
+		font-size: 5.2vw;
+	}
+
+	.section.started .started-content .h-subtitles {
+		margin: 0 0 52px 26vw;
+		block-size: 22px;
+	}
+
+	.section.started .started-content .h-text {
+		margin: 0 0 16px 8vw;
+	}
+}
