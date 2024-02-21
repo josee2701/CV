@@ -17,44 +17,25 @@
 	transition: all 0.7s cubic-bezier(0.165, 0.85, 0.45, 1);
 }
 
-.menu-btn {
-	display: none;
-	/* oculto por defecto */
-	/* ... otros estilos para el botón ... */
-}
-
 .logo-container {
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
+	color: #FFF;
 }
 
 .header .logo {
 	display: flex;
 	align-items: center;
-	/* Ajusta el padding si es necesario para posicionar correctamente el logo y el texto */
 	padding: 10px;
 }
 
 .header .logo img.logo-img {
 	height: auto;
 	max-height: 70px;
+	color:#FFF
 }
 
-.header .logo .logo-lnk {
-	/* Asegúrate de que el texto esté alineado al lado del logo */
-	margin-left: 10px;
-	/* espacio entre el logo y el texto */
-	font-size: 15px;
-	/* ajusta el tamaño del texto si es necesario */
-	display: flex;
-	align-items: center;
-	/* para alinear verticalmente si es necesario */
-	flex-direction: column;
-	/* para la presentación en dos líneas */
-	justify-content: center;
-	/* centra el contenido si el logo es más alto */
-}
 
 .header .logo-lnk {
 	display: block;
@@ -63,11 +44,10 @@
 	/* Alinea el texto a la izquierda */
 }
 
-.header .download-cv-btn {
-	float: right;
-	margin-top: 8px;
-	margin-right: 8px;
-	border-color: #FFF;
+.menu-btn {
+	display: none;
+	/* oculto por defecto */
+	/* ... otros estilos para el botón ... */
 }
 
 .header .top-menu {

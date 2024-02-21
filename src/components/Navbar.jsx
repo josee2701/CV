@@ -24,7 +24,7 @@ function Navbar() {
                 <div className="logo-container">
                     <a href="/" className="logo"> {/* Cambia el <a> por <Link> para la navegación principal */}
                         <img src={logo} alt="Logo" className="logo-img"/>
-                        <span>Jose Campos</span>
+                        <span className="logo-lnk">Jose Campos</span>
                     </a>
                 </div>
                 <div className="menu-btn" onClick={toggleMenu}>
@@ -56,9 +56,9 @@ function NavLink({ to, children }) {
 function Navigation() {
     return (
         <div className="menu">
-            <NavLink href="#home">INICIO</NavLink>
-            <NavLink href="#about">INFO</NavLink>
-            <NavLink href="#resume">RESUME</NavLink>
+            <NavLink to="#perfil">INICIO</NavLink>
+            <NavLink to="#about">INFO</NavLink>
+            <NavLink to="#resume">RESUME</NavLink>
             {/* ... otros enlaces ... */}
         </div>
     );

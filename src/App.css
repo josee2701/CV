@@ -9,22 +9,11 @@ body {
 .combined-profile-container {
   inline-size: 100%;
   max-inline-size: 1200px;
-  margin: 0 auto;
+  margin: auto;
   padding: 0 20px;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-}
-
-.profile-section {
-  inline-size: 100%;
-  max-inline-size: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-
 }
 
 .App-logo {
