@@ -114,6 +114,10 @@
 	color: red;
 	transform: translateY(-5px);
 }
+html {
+	scroll-behavior: smooth;
+  }
+  
 
 @media (max-width: 1199px) {
 	.header {

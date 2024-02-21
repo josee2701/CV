@@ -1,117 +1,92 @@
-.background-bg {
-	inset-block-start: 0;
-	inset-inline-start: 0;
-	inline-size: 1%;
-	block-size: 100%;
+.home-section {
+	position: relative;
+	/* Se cambió de 'absolute' para que se ajuste dentro del flujo del documento */
+	width: 100%;
+	/* 'inline-size' se cambia a 'width' para mejor claridad */
+	height: auto;
+	/* 'block-size' se cambia a 'height' y se pone 'auto' para adaptarse al contenido */
 }
 
 
-.background-filter {
-	position: absolute;
-	inset-block-start: 0;
-	inset-inline-start: 0;
-	inline-size: 45%;
-	block-size: 100%;
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: cover;
-}
 
-.background-filter .background-img {
-	-webkit-filter: grayscale(100%);
-	filter: grayscale(100%);
-	mix-blend-mode: luminosity;
-}
-
-.background-filter.gradient:after {
-	content: '';
-	position: absolute;
-	inset-inline-start: 0;
-	inset-block-start: 0;
-	inline-size: 40%;
-	block-size: 100%;
-	background: -moz-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.5) 0%, #373b40 90%);
-	background: -webkit-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.5) 0%, #373b40 90%);
-	background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.5) 0%, #373b40 90%);
-}
-
-.background-filter.gradient .background-img {
-	-webkit-filter: none;
-	filter: none;
-	mix-blend-mode: unset;
-}
-
-.background-filter.circle {
-	clip-path: circle(75% at 10% 45%);
-	-webkit-clip-path: circle(75% at 10% 45%);
-}
-
-.background-filter.circle .background-img {
-	-webkit-filter: none;
-	filter: none;
-	mix-blend-mode: unset;
-}
-
-
-.background-img {
-	position: absolute;
-	inset-inline-start: 0;
-	inset-block-start: 0;
-	inline-size: 100%;
-	block-size: 100%;
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: cover;
-}
-
-.profileContainer {
+.profile-container {
 	position: fixed;
+	/* o 'fixed' si quieres que se mantenga en la misma posición en la pantalla */
+	top: 0;
+	left: 0;
+	width: 45%;
+	/* Asegúrate de que este porcentaje no empuje la imagen fuera de la pantalla en dispositivos pequeños */
+	height: 100vh;
+	/* Usa 'vh' (viewport height) para que tome toda la altura de la pantalla */
+	background: none;
+	/* Si no se está usando una imagen de fondo, esto no es necesario */
+	overflow: hidden;
+
 }
 
+/* Estilos de la imagen de perfil */
+.profile-image {
+	border-top-right-radius: 50%;
+	/* Redondea la esquina superior derecha */
+	border-bottom-right-radius: 50%;
+	/* Redondea la esquina inferior derecha */
+	width: 100%;
+	/* Asegura que la imagen se adapte al ancho del contenedor */
+	height: 100%;
+	/* Ahora forzamos que la imagen tome toda la altura del contenedor */
+	object-fit: cover;
+	/* Asegura que la imagen cubra el espacio sin deformarse */
+}
 
+/* Media queries para tamaños de pantalla específicos */
+/* Media queries para ajustar estilos en diferentes tamaños de pantalla */
 @media (max-width: 1199px) {
-
-	.background-filter {
-		position: absolute;
-		inset-block-start: 0;
-		inset-inline-start: 0;
-		inline-size: 120%;
-		block-size: 100%;
-		background-repeat: no-repeat;
-		background-position: center center;
-		background-size: cover;
+	.profile-container {
+		position: static;
+		/* Cambia a estático para que fluya con el documento */
+		width: 100%;
+		/* Ajusta el ancho para pantallas pequeñas */
+		height: auto;
+		/* Altura automática para acomodar el contenido */
+		top: 0;
+		left: 0;
 	}
 
-	.background-img {
-		position: absolute;
-		inset-inline-start: 0;
-		inset-block-start: 0;
-		inline-size: 100%;
-		background-position: top center;
-		background-size: cover auto;
+	.profile-image {
+		border-radius: 0 0 50% 50%;
+		/* Borra el borde redondeado para dispositivos móviles */
+		position: relative;
+		/* La posición relativa permite que la imagen se desplace con el contenido */
+		width: 100%;
+		/* Toma todo el ancho del dispositivo */
+		height: auto;
+		/* La altura se ajusta automáticamente para mantener la relación de aspecto de la imagen */
+		object-fit: cover;
 	}
-
-	.background-filter.circle {
-		clip-path: circle(100% at 100% 0%);
-		-webkit-clip-path: circle(75% at 50% 5%);
-	}
-
 }
+
 
 @media (max-width: 720px) {
-	.background-bg {
-		block-size: 450px;
+	.profile-container {
+		position: static;
+		/* Cambia a estático para que fluya con el documento */
+		width: 100%;
+		/* Ajusta el ancho para pantallas pequeñas */
+		height: auto;
+		/* Altura automática para acomodar el contenido */
+		top: 0;
+		left: 0;
 	}
 
-	.background-filter {
-		position: absolute;
-		inset-block-start: 0;
-		inset-inline-start: 0;
-		inline-size: 160%;
-		block-size: 83%;
-		background-repeat: no-repeat;
-		background-position: center center;
-		background-size: cover;
+	.profile-image {
+		border-radius: 0 0 50% 50%;
+		/* Borra el borde redondeado para dispositivos móviles */
+		position: relative;
+		/* La posición relativa permite que la imagen se desplace con el contenido */
+		width: 100%;
+		/* Toma todo el ancho del dispositivo */
+		height: auto;
+		/* La altura se ajusta automáticamente para mantener la relación de aspecto de la imagen */
+		object-fit: cover;
 	}
-
 }

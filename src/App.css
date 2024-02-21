@@ -12,7 +12,7 @@ body {
   margin: 0 auto;
   padding: 0 20px;
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   flex-direction: column;
 }
 
@@ -22,7 +22,7 @@ body {
   margin: 0 auto;
   padding: 0 20px;
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   flex-direction: column;
 
 }
