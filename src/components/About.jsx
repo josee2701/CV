@@ -1,12 +1,14 @@
+import { faCode, faLaptopCode } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
-import '../assets/css/About.css'; // Asegúrate de que los estilos estén correctamente importados
+import '../assets/css/About.css';
 import '../assets/css/General.css';
 
 function About() {
   return (
     <div className="profile-section" id="about"> {/* Combina estilos de Profile y About */}
       <div className="main-container centrize"> {/* Utiliza ambas clases para aplicar estilos */}
-        <h1 className="title">Informacion Personal</h1>
+        <h1 className="title">Informacion Personal</h1> {/* Usa clases para títulos */}
         <div className="subtitle-container">
               Mi historia
             </div>
@@ -28,19 +30,25 @@ function About() {
            <li><strong>Github: </strong> <a href="https://github.com/josee2701" target="_blank" rel="noopener noreferrer">josee2701</a></li>
            <li><strong>LinkedIn: </strong> <a href="https://www.linkedin.com/in/josee-py" target="_blank" rel="noopener noreferrer">/josee-py/</a></li>
         </ul>
+        <div className="titles">
 //           <div className="title">Services</div>
-        <div className="service-items">
-        <div className="service-col">
-             <div className="icon"><i className="fa-solid fa-laptop-code"></i></div>
-             <div className="name">Desarrollo Web</div>
-             <p>Economics is a social science...</p>
-           </div>
+//         </div>
+<div className="service-items">
+          <div className="service-col">
+            <div className="icon">
+              <FontAwesomeIcon icon={faLaptopCode} />
+            </div>
+            <div className="name">Desarrollo Web</div>
+            <p>Economics is a social science...</p>
+          </div>
 
-           <div className="service-col">
-             <div className="icon"><i className="fa-solid fa-code"></i></div>
+          <div className="service-col">
+            <div className="icon">
+              <FontAwesomeIcon icon={faCode} />
+            </div>
             <div className="name">Desarrollo Backend</div>
-             <p>Advertising Management though is a complex process...</p>
-           </div>
+            <p>Advertising Management though is a complex process...</p>
+          </div>
         </div>
       </div>
     </div>
@@ -48,3 +56,4 @@ function About() {
 }
 
 export default About;
+

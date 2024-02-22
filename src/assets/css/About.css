@@ -42,12 +42,13 @@
     /* Alineación a la izquierda para pantallas grandes */
 }
 
-.info-list,
-.service-items,
-.service-col,
-.icon,
-.name {
-    /* Estilos específicos si son necesarios */
+ .icon {
+	margin-bottom: 10px;
+	/* Ajusta el valor según sea necesario */
+	font-size: 32px;
+	block-size: 32px;
+	color: #0c042b;
+	margin-inline-start: 45%;
 }
 
 @media (max-width: 1199px) {
