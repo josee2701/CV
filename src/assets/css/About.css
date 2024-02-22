@@ -1,131 +1,115 @@
-.header {
+#about.main-container {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 0 0 50px;
-    position: fixed;
-    left: 50px;
-    right: 50px;
-    top: 40px;
-    height: 80px;
-    z-index: 100;
-    background: #333;
-    border-radius: 80px;
-    transition: all 0.7s cubic-bezier(0.165, 0.85, 0.45, 1);
-}
-
-.logo-container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-.header .logo {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-}
-
-.header .logo img.logo-img {
-    height: auto;
-    max-height: 70px;
-}
-
-.header .logo-lnk {
-    margin-left: 10px;
-    font-size: 15px;
-    display: flex;
-    align-items: center;
     flex-direction: column;
-    justify-content: center;
-    color: #FFF;
+    align-items: center; /* Asegura que todos los elementos estén centrados horizontalmente */
+    width: 80%; /* o un porcentaje específico según tu diseño */
+    max-width: 960px; /* Ajusta según el ancho máximo deseado */
+    margin: auto; /* Centra el contenedor en la página */
+    padding-top: 5%; /* Espacio en la parte superior */
+}
+.title {
+    margin-left: auto;
+    right: 20px;
+}
+.subtitle {
+    font-size: 1rem;
+    /* Usando rem para un tamaño de fuente más consistente */
+    line-height: 1.4;
+    /* Aumentando un poco para mejorar la legibilidad */
+    font-weight: 700;
+    /* Ajustando a un valor que es comúnmente soportado por la mayoría de las fuentes */
+    color: #041330;
+    /* Manteniendo el color por su buen contraste */
+    word-break: break-word;
+    /* Útil para evitar desbordamientos */
+    border-radius: 10px;
+    /* Ajustado para un efecto visual aplicable a contenedores */
+    padding: 0.5em 1em;
+    /* Añadido para dar espacio alrededor del texto */
+    display: inline-block;
+    /* Para permitir el padding y border-radius */
+    background-color: #e0e0e0;
+    /* Fondo claro para contrastar con el texto oscuro */
+    margin: 0.5em;
+    /* Espacio alrededor de cada etiqueta para evitar que se toquen */
+
+}
+
+.h-text {
+    color: white;
+    /* Cambia el color del texto a blanco */
     text-align: left;
+    /* Alineación a la izquierda para pantallas grandes */
 }
 
-.menu-btn {
-    display: none;
-    cursor: pointer;
-    /* Aquí puedes agregar más estilos para el botón del menú si es necesario */
-}
-
-.top-menu {
-    display: flex;
-    align-items: center;
-    color: #FFF;
-    /* Más estilos para el menú superior si son necesarios */
-}
-
-.nav-button {
-    background-color: transparent;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    padding: 5px 10px;
-    font-weight: bold;
-    transition: color 0.3s, transform 0.3s;
-}
-
-.nav-button:hover {
-    color: red;
-    transform: translateY(-5px);
+.info-list,
+.service-items,
+.service-col,
+.icon,
+.name {
+    /* Estilos específicos si son necesarios */
 }
 
 @media (max-width: 1199px) {
-    .header {
-        padding: 0 30px;
-        left: 0;
-        right: 0;
-        top: 20px;
-        background: none;
-        border-radius: 0;
+    .about {
+        text-align: center;
     }
 
-    .header .logo img.logo-img {
-        margin-right: 30px;
-        max-width: 85px;
+    .subtitle {
+        font-size: 1rem;
+        color: var(--color-subtitle);
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-left: 45%;
+        /* Simplificado para consistencia */
     }
 
-    .header .logo-lnk {
-        font-size: 20px;
-    }
-
-    .logo-container {
-        flex-direction: column;
-    }
-
-    .header .logo-lnk {
-        margin-left: 0;
-        margin-top: 5px;
-    }
-
-    .menu-btn {
-        display: inline-block;
-    }
-
-    .show-menu .top-menu {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        position: absolute;
-        right: 20px;
-        top: 100px;
-        background-color: #333;
-        border-radius: 10px;
-        padding: 10px;
-        z-index: 100;
-    }
-
-    .nav-button {
-        display: block;
-        width: 100%;
-        text-align: left;
-        margin-bottom: 10px;
+    .h-text {
+        /* Asegura que .h-text esté al centro en dispositivos menores a 1199px */
+        text-align: center;
     }
 }
 
 @media (max-width: 720px) {
-    /* Los estilos bajo este breakpoint se mantienen iguales o se ajustan según sea necesario */
-    .menu-btn {
-        font-size: 24px; /* Ajuste al tamaño del ícono del menú en pantallas más pequeñas */
+    .about {
+        text-align: center;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+        /* Usando rem para un tamaño de fuente más consistente */
+        line-height: 1.4;
+        /* Aumentando un poco para mejorar la legibilidad */
+        font-weight: 700;
+        /* Ajustando a un valor que es comúnmente soportado por la mayoría de las fuentes */
+        color: #041330;
+        /* Manteniendo el color por su buen contraste */
+        word-break: break-word;
+        /* Útil para evitar desbordamientos */
+        border-radius: 10px;
+        /* Ajustado para un efecto visual aplicable a contenedores */
+        padding: 0.5em 1em;
+        /* Añadido para dar espacio alrededor del texto */
+        display: inline-block;
+        /* Para permitir el padding y border-radius */
+        background-color: #e0e0e0;
+        /* Fondo claro para contrastar con el texto oscuro */
+        margin: 0.5em;
+        /* Espacio alrededor de cada etiqueta para evitar que se toquen */
+
+    }
+
+    /* Ajustes adicionales para vistas más pequeñas si son necesarios */
+    .titles,
+    .title,
+    .subtitle {
+        margin-top: 10px;
+        /* Ajusta el margen superior para dispositivos pequeños */
+    }
+
+    .h-text {
+        /* Ajustes específicos para el texto en dispositivos pequeños */
+        text-align: center;
+        /* Centra el texto en dispositivos muy pequeños */
     }
 }

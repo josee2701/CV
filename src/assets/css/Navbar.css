@@ -33,7 +33,7 @@
 .header .logo img.logo-img {
 	height: auto;
 	max-height: 70px;
-	color:#FFF
+	color: #FFF
 }
 
 
@@ -48,6 +48,15 @@
 	display: none;
 	/* oculto por defecto */
 	/* ... otros estilos para el botón ... */
+}
+.menu-btn {
+	display: none;
+	/* Mostrar botón de menú en móviles */
+	cursor: pointer;
+	float: right;
+	margin-top: 2px;
+	margin-right: 27px;
+	font-size: 30px;
 }
 
 .header .top-menu {
@@ -94,10 +103,11 @@
 	color: red;
 	transform: translateY(-5px);
 }
+
 html {
 	scroll-behavior: smooth;
-  }
-  
+}
+
 
 @media (max-width: 1199px) {
 	.header {
@@ -105,8 +115,7 @@ html {
 		left: 0;
 		right: 0;
 		top: 20px;
-		background: none;
-		border-radius: 0;
+		border-radius: 80px;
 	}
 
 	.header .logo img.logo-img {
@@ -144,27 +153,19 @@ html {
 	.menu-btn {
 		display: inline-block;
 		/* Mostrar botón de menú en móviles */
-		cursor: pointer;
-		float: right;
-		margin-top: 25px;
-		margin-right: 20px;
-		font-size: 40px;
-		/* Ajustar el tamaño aquí */
 	}
 
 	.show-menu .top-menu {
 		display: flex;
-		/* Mostrar menú cuando se haga clic en el botón de menú */
 		flex-direction: column;
 		align-items: flex-start;
 		position: absolute;
-		right: 20px;
-		top: 100px;
+		top: 80px;
+		/* Ajustado para alinear justo debajo del header */
+		right: 0;
 		background-color: #333;
 		border-radius: 10px;
 		padding: 10px;
-		z-index: 100;
-		/* Asegurarse de que el menú esté sobre otros elementos */
 	}
 
 	.nav-button {
@@ -183,12 +184,11 @@ html {
 
 @media (max-width: 720px) {
 	.header {
-		padding: 0 30px;
-		left: 0;
-		right: 0;
-		top: 20px;
-		background: none;
+		padding: 0 15px;
+		/* Ajustado para pantallas más pequeñas */
 		border-radius: 0;
+		/* Opcional: quitar el border-radius en dispositivos muy pequeños */
+		border-radius: 80px;
 	}
 
 	.header .logo img.logo-img {
@@ -213,12 +213,6 @@ html {
 	.menu-btn {
 		display: inline-block;
 		/* Mostrar botón de menú en móviles */
-		cursor: pointer;
-		float: right;
-		margin-top: 25px;
-		margin-right: 20px;
-		font-size: 24px;
-		/* Ajustar el tamaño aquí */
 	}
 
 	.show-menu .top-menu {
