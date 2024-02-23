@@ -22,7 +22,7 @@ const Profile = React.memo(function Profile() {
     <div className="profile-section" id="perfil">
       <div className="main-container"> {/* Renombrado de `content-center` a `main-container` */}
           <h1 className="profile-title">
-            Jose Fernando<br /> Campos S.
+            Jose Fernando Campos S.
           </h1>
           <div className="profile-content">
             <div className="subtitle-container">

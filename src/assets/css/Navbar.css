@@ -12,7 +12,7 @@
 	top: 40px;
 	height: 80px;
 	z-index: 100;
-	background: #333;
+	background: #585d65;
 	border-radius: 80px;
 	transition: all 0.7s cubic-bezier(0.165, 0.85, 0.45, 1);
 }
@@ -163,7 +163,7 @@ html {
 		top: 80px;
 		/* Ajustado para alinear justo debajo del header */
 		right: 0;
-		background-color: #333;
+		background-color: #585d65;
 		border-radius: 10px;
 		padding: 10px;
 	}
@@ -223,7 +223,6 @@ html {
 		position: absolute;
 		right: 20px;
 		top: 100px;
-		background-color: #333;
 		border-radius: 10px;
 		padding: 10px;
 		z-index: 100;

@@ -1,10 +1,10 @@
 import React from 'react';
-import '../assets/css/Resume.css';
 import '../assets/css/General.css';
+import '../assets/css/Resume.css';
 
 function About(props) {
     return (
-        <div className="section resume" id="section-resumen">
+        <div className="section resume" id="resumen">
             <div className="centrize full-width">
 
                 <div className="titles">

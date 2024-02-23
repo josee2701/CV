@@ -4,17 +4,7 @@
     --color-subtitle: #0c042b;
 }
 
-.section {
-    position: relative;
-    overflow: hidden;
-    padding-inline-start: 6%;
-    padding-inline-end: 3%;
-    padding-block-start: 130px;
-}
-
 .title {
-    max-inline-size: 70%;
-    font-size: 55px;
     line-height: 1.2;
     color: var(--color-title);
     font-weight: 800;
@@ -31,7 +21,6 @@
 /* Regla @media para dispositivos con ancho máximo de 1199px */
 @media (max-width: 1199px) {
     .title {
-        margin-left: 20vw; /* Ajusta según sea necesario para el diseño responsivo */
         font-size: 45px; /* Ajusta el tamaño de fuente para dispositivos más pequeños */
     }
     .subtitle {
@@ -43,7 +32,6 @@
 @media (max-width: 768px) {
     .title {
         font-size: 35px; /* Más ajustes para pantallas aún más pequeñas */
-        margin-left: 10vw;
     }
     .subtitle {
         font-size: 12px;

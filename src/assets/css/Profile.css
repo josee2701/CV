@@ -11,7 +11,6 @@
     margin: auto;
     z-index: 11;
 }
-
 .main-container {
     display: flex;
     flex-direction: column;
@@ -21,8 +20,6 @@
     margin: auto; /* Centra el contenedor en la página */
     padding-top: 5%; /* Espacio en la parte superior */
 }
-
-
 .profile-title {
     padding: 20px;
     font-size: 2.5rem;
@@ -31,9 +28,9 @@
     color: #ffffff;
     background: #213249;
     border-radius: 20px;
-    width: fit-content; /* Ajusta el ancho al contenido del título */
     margin-top: 20px; /* Espacio desde el top */
     margin-bottom: 20px; /* Espacio antes del contenido subsiguiente */
+    margin-left: 225px
 }
 .profile-content {
     display: flex;
@@ -42,42 +39,45 @@
     justify-content: flex-start;
     padding-left: 420px; /* Mueve todo el contenido hacia la derecha */
 }
-
 .profile-content .subtitle-container, .profile-content .profile-description {
     font-size: 1rem;
     color: #fff; /* o #ffffff para `.profile-description` */
     margin: 10px 0;
-    width: 100%; /* Alinea el ancho con el del contenedor padre */
     margin-top: 20px; /* Espacio adicional en la parte superior si es necesario */
+    padding: 0
 }
 
-
 .lenguajes {
-    font-size: 1rem; /* Usando rem para un tamaño de fuente más consistente */
-    line-height: 1.4; /* Aumentando un poco para mejorar la legibilidad */
-    font-weight: 700; /* Ajustando a un valor que es comúnmente soportado por la mayoría de las fuentes */
-    color: #041330; /* Manteniendo el color por su buen contraste */
-    word-break: break-word; /* Útil para evitar desbordamientos */
-    border-radius: 10px; /* Ajustado para un efecto visual aplicable a contenedores */
-    padding: 0.5em 1em; /* Añadido para dar espacio alrededor del texto */
-    display: inline-block; /* Para permitir el padding y border-radius */
-    background-color: #e0e0e0; /* Fondo claro para contrastar con el texto oscuro */
-    margin: 0.5em; /* Espacio alrededor de cada etiqueta para evitar que se toquen */
+    font-size: 1rem; 
+    line-height: 1.4; 
+    font-weight: 700; 
+    color: #041330; 
+    word-break: break-word; 
+    border-radius: 10px;
+    padding: 0.5em 1em;
+    display: inline-block; 
+    background-color: #e0e0e0; 
+    margin: 0.5em; 
 }
 
 /* Reglas @media para dispositivos con ancho máximo de 1199px */
 @media (max-width: 1199px) {
     .profile-title {
         margin: 0 auto; /* Centra el título */
-        padding: 20px; /* Mantiene un padding uniforme */
         font-size: 4rem; /* Ajusta el tamaño de la fuente según la necesidad */
+            text-align: center;
+            padding-top: 22%
+    }
+    .main-container {
+        
+        padding-top: 22%; /* Espacio en la parte superior */
     }
     .profile-content {
         padding-left: 0; /* Elimina el desplazamiento a la derecha */
         align-items: center; /* Centra los elementos */
+        text-align: center;
     }
 }
-
 
 /* Reglas @media para dispositivos con ancho máximo de 720px */
 @media (max-width: 720px) {
@@ -95,6 +95,7 @@
     .profile-content {
         padding: 0; /* Elimina cualquier desplazamiento a la derecha */
         align-items: center; /* Centra los elementos */
+        text-align: center;
     }
 
     .lenguajes {

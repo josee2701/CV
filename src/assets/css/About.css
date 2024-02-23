@@ -1,116 +1,164 @@
-#about.main-container {
+
+#about .main-container {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Asegura que todos los elementos estén centrados horizontalmente */
-    width: 80%; /* o un porcentaje específico según tu diseño */
-    max-width: 960px; /* Ajusta según el ancho máximo deseado */
-    margin: auto; /* Centra el contenedor en la página */
-    padding-top: 5%; /* Espacio en la parte superior */
+    align-items: center;
+    width: 88%;
+    max-width: 967px;
+    margin: auto;
+    padding-top: 80%;
 }
+
+/* Consolidación de estilos para títulos */
 .title {
-    margin-left: auto;
-    right: 20px;
+    font: size 10px;
+    ;
 }
+
+.title-right-shift,
+.title-right {
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+}
+
+.title-right-shift {
+    margin-left: 400px;
+    font-size: 52px;
+}
+
+.title-right {
+    font-size: 52px;
+    padding-left: 75px;
+
+}
+
+/* Estilos para subtítulos y contenidos */
+.subtitle-container,
 .subtitle {
     font-size: 1rem;
-    /* Usando rem para un tamaño de fuente más consistente */
     line-height: 1.4;
-    /* Aumentando un poco para mejorar la legibilidad */
     font-weight: 700;
-    /* Ajustando a un valor que es comúnmente soportado por la mayoría de las fuentes */
     color: #041330;
-    /* Manteniendo el color por su buen contraste */
     word-break: break-word;
-    /* Útil para evitar desbordamientos */
     border-radius: 10px;
-    /* Ajustado para un efecto visual aplicable a contenedores */
     padding: 0.5em 1em;
-    /* Añadido para dar espacio alrededor del texto */
     display: inline-block;
-    /* Para permitir el padding y border-radius */
     background-color: #e0e0e0;
-    /* Fondo claro para contrastar con el texto oscuro */
-    margin: 0.5em;
-    /* Espacio alrededor de cada etiqueta para evitar que se toquen */
-
+}
+.subtitle-container2{
+    font-size: 1rem;
+    line-height: 1.4;
+    font-weight: 700;
+    color: #041330;
+    word-break: break-word;
+    border-radius: 10px;
+    padding: 0.5em 1em;
+    display: inline-block;
+    background-color: #e0e0e0;
+    margin-left: 2.5em;
 }
 
-.h-text {
+/* Estilos para elementos de lista, iconos y texto */
+.name{
+    font-weight: 1000
+}
+.h-text,
+.name,
+p,
+.info-list li {
     color: white;
-    /* Cambia el color del texto a blanco */
-    text-align: left;
-    /* Alineación a la izquierda para pantallas grandes */
 }
 
- .icon {
-	margin-bottom: 10px;
-	/* Ajusta el valor según sea necesario */
-	font-size: 32px;
-	block-size: 32px;
-	color: #0c042b;
-	margin-inline-start: 45%;
+.info-list {
+    list-style-type: none;
+    padding: 0;
 }
 
+.info-list li strong {
+    color: black;
+}
+
+.icon {
+    margin: 50px 0;
+    font-size: 36px;
+    color: #0c042b;
+}
+
+/* Flexbox y columnas de servicios */
+.service-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding-left: 405px;
+    margin-left: 20px;
+}
+
+.service-col {
+    flex: 1 1 45%;
+}
+
+/* Media queries para responsividad */
 @media (max-width: 1199px) {
-    .about {
-        text-align: center;
+    #about .main-container {
+        padding-top: 17%;
     }
 
-    .subtitle {
-        font-size: 1rem;
-        color: var(--color-subtitle);
-        font-weight: 600;
-        text-transform: uppercase;
-        margin-left: 45%;
-        /* Simplificado para consistencia */
+    .service-items {
+        display: block;
     }
 
-    .h-text {
-        /* Asegura que .h-text esté al centro en dispositivos menores a 1199px */
+    .title,
+    .title-right-shift,
+    .title-right,
+    .h-text,
+    .info-list,
+    .service-items {
+        margin-left: 0;
         text-align: center;
+        padding-left: 0;
+    }
+
+    .title-right-shift {
+        font-size: 2.5rem;
+    }
+    .subtitle-container2{
+        
+        margin: auto;
     }
 }
+
 
 @media (max-width: 720px) {
     .about {
         text-align: center;
     }
 
-    .subtitle {
-        font-size: 1rem;
-        /* Usando rem para un tamaño de fuente más consistente */
-        line-height: 1.4;
-        /* Aumentando un poco para mejorar la legibilidad */
-        font-weight: 700;
-        /* Ajustando a un valor que es comúnmente soportado por la mayoría de las fuentes */
-        color: #041330;
-        /* Manteniendo el color por su buen contraste */
-        word-break: break-word;
-        /* Útil para evitar desbordamientos */
-        border-radius: 10px;
-        /* Ajustado para un efecto visual aplicable a contenedores */
-        padding: 0.5em 1em;
-        /* Añadido para dar espacio alrededor del texto */
-        display: inline-block;
-        /* Para permitir el padding y border-radius */
-        background-color: #e0e0e0;
-        /* Fondo claro para contrastar con el texto oscuro */
-        margin: 0.5em;
-        /* Espacio alrededor de cada etiqueta para evitar que se toquen */
-
+    .title {
+        right: 20px;
     }
 
-    /* Ajustes adicionales para vistas más pequeñas si son necesarios */
-    .titles,
-    .title,
     .subtitle {
-        margin-top: 10px;
-        /* Ajusta el margen superior para dispositivos pequeños */
+        font-size: 1rem;
+        line-height: 1.4;
+        font-weight: 700;
+        color: #041330;
+        word-break: break-word;
+        border-radius: 10px;
+        padding: 0.5em 1em;
+        display: inline-block;
+        background-color: #e0e0e0;
+        margin: 0.5em;
+
     }
 
     .h-text {
-        /* Ajustes específicos para el texto en dispositivos pequeños */
         text-align: center;
-        /* Centra el texto en dispositivos muy pequeños */
+    }
+
+    .info-list {
+        text-align: center;
+        padding: 0.5em 1em;
     }
 }
