@@ -1,4 +1,8 @@
 
+#about.profile-section {
+    margin-bottom: 841px;
+}
+
 #about .main-container {
     display: flex;
     flex-direction: column;
@@ -56,7 +60,7 @@
     padding: 0.5em 1em;
     display: inline-block;
     background-color: #e0e0e0;
-    margin-left: 2.5em;
+    margin-left: 4.5em;
 }
 
 /* Estilos para elementos de lista, iconos y texto */
@@ -101,8 +105,12 @@ p,
 
 /* Media queries para responsividad */
 @media (max-width: 1199px) {
+
+    #about.profile-section {
+        margin-bottom: auto;
+      }
     #about .main-container {
-        padding-top: 17%;
+        padding-top: 5%;
     }
 
     .service-items {
@@ -118,9 +126,11 @@ p,
         margin-left: 0;
         text-align: center;
         padding-left: 0;
+        
     }
 
-    .title-right-shift {
+    .title-right-shift, 
+    .title-right{
         font-size: 2.5rem;
     }
     .subtitle-container2{

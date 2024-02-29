@@ -11,70 +11,94 @@
     margin: auto;
     z-index: 11;
 }
+
 .main-container {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Asegura que todos los elementos estén centrados horizontalmente */
-    width: 80%; /* o un porcentaje específico según tu diseño */
-    max-width: 960px; /* Ajusta según el ancho máximo deseado */
-    margin: auto; /* Centra el contenedor en la página */
-    padding-top: 5%; /* Espacio en la parte superior */
+    align-items: center;
+    /* Asegura que todos los elementos estén centrados horizontalmente */
+    width: 80%;
+    /* o un porcentaje específico según tu diseño */
+    max-width: 960px;
+    /* Ajusta según el ancho máximo deseado */
+    margin: auto;
+    /* Centra el contenedor en la página */
+    padding-top: 5%;
+    /* Espacio en la parte superior */
 }
+
 .profile-title {
     padding: 20px;
     font-size: 2.5rem;
     line-height: 1.2;
     font-weight: 800;
     color: #ffffff;
-    background: #213249;
+    background: #072f4e;
     border-radius: 20px;
-    margin-top: 20px; /* Espacio desde el top */
-    margin-bottom: 20px; /* Espacio antes del contenido subsiguiente */
+    margin-top: 20px;
+    /* Espacio desde el top */
+    margin-bottom: 20px;
+    /* Espacio antes del contenido subsiguiente */
     margin-left: 225px
 }
+
 .profile-content {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Alinea elementos al inicio para mantener la estructura vertical */
+    align-items: flex-start;
+    /* Alinea elementos al inicio para mantener la estructura vertical */
     justify-content: flex-start;
-    padding-left: 420px; /* Mueve todo el contenido hacia la derecha */
+    padding-left: 420px;
+    /* Mueve todo el contenido hacia la derecha */
 }
-.profile-content .subtitle-container, .profile-content .profile-description {
+
+.profile-content .subtitle-container,
+.profile-content .profile-description {
     font-size: 1rem;
-    color: #fff; /* o #ffffff para `.profile-description` */
+    color: #fff;
+    /* o #ffffff para `.profile-description` */
     margin: 10px 0;
-    margin-top: 20px; /* Espacio adicional en la parte superior si es necesario */
+    margin-top: 20px;
+    /* Espacio adicional en la parte superior si es necesario */
     padding: 0
 }
 
 .lenguajes {
-    font-size: 1rem; 
-    line-height: 1.4; 
-    font-weight: 700; 
-    color: #041330; 
-    word-break: break-word; 
+    font-size: 1rem;
+    line-height: 1.4;
+    font-weight: 700;
+    color: #041330;
+    word-break: break-word;
     border-radius: 10px;
     padding: 0.5em 1em;
-    display: inline-block; 
-    background-color: #e0e0e0; 
-    margin: 0.5em; 
+    display: inline-block;
+    background-color: #e0e0e0;
+    margin: 0.5em;
 }
 
 /* Reglas @media para dispositivos con ancho máximo de 1199px */
 @media (max-width: 1199px) {
-    .profile-title {
-        margin: 0 auto; /* Centra el título */
-        font-size: 4rem; /* Ajusta el tamaño de la fuente según la necesidad */
-            text-align: center;
-            padding-top: 22%
+    #perfil .profile-title {
+        margin: 0 auto;
+        /* Centra el título */
+        font-size: 3rem;
+        /* Ajusta el tamaño de la fuente según la necesidad */
+        text-align: center;
+        padding: 0%;
+        /* Ajusta el padding para pantallas pequeñas */
     }
+
     .main-container {
-        
-        padding-top: 22%; /* Espacio en la parte superior */
+
+        padding-top: 22%;
+        /* Espacio en la parte superior */
     }
+
     .profile-content {
-        padding-left: 0; /* Elimina el desplazamiento a la derecha */
-        align-items: center; /* Centra los elementos */
+        padding-left: 0;
+        /* Elimina el desplazamiento a la derecha */
+        align-items: center;
+        /* Centra los elementos */
         text-align: center;
     }
 }
@@ -82,25 +106,33 @@
 /* Reglas @media para dispositivos con ancho máximo de 720px */
 @media (max-width: 720px) {
     .profile-section {
-        padding: 0; /* Ajusta el padding para evitar desbordamientos */
-        height: auto; /* Cambia a auto para adaptarse al contenido */
+        padding: 0;
+        /* Ajusta el padding para evitar desbordamientos */
+        height: auto;
+        /* Cambia a auto para adaptarse al contenido */
     }
 
     .profile-title {
-        margin: 0 auto; /* Asegura que el título esté centrado */
-        padding: 10px; /* Ajusta el padding para pantallas pequeñas */
-        font-size: 2rem; /* Reduce el tamaño de la fuente para mejor ajuste */
+        margin: 0 auto;
+        /* Asegura que el título esté centrado */
+        padding: 10px;
+        /* Ajusta el padding para pantallas pequeñas */
+        font-size: 2rem;
+        /* Reduce el tamaño de la fuente para mejor ajuste */
     }
 
     .profile-content {
-        padding: 0; /* Elimina cualquier desplazamiento a la derecha */
-        align-items: center; /* Centra los elementos */
+        padding: 0;
+        /* Elimina cualquier desplazamiento a la derecha */
+        align-items: center;
+        /* Centra los elementos */
         text-align: center;
     }
 
     .lenguajes {
-        font-size: 1rem; /* Ajusta el tamaño de la fuente para consistencia */
-        border-radius: 10px; /* Reduce el radio del borde para un aspecto más adecuado */
+        font-size: 1rem;
+        /* Ajusta el tamaño de la fuente para consistencia */
+        border-radius: 10px;
+        /* Reduce el radio del borde para un aspecto más adecuado */
     }
 }
-

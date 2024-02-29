@@ -79,13 +79,13 @@
 
 /* Pseudo-clase para hover */
 .nav-button:hover {
-	color: red;
+	color: #072f4e;
 	transform: translateY(-5px);
 }
 
 /* Puedes añadir una clase adicional para el estado 'activo' si es necesario */
 .nav-button-active {
-	color: red;
+	color: rgb(15, 97, 221)ed;
 	transform: translateY(-5px);
 }
 
@@ -100,7 +100,7 @@
 }
 
 .button:hover {
-	color: red;
+	color: rgb(21, 114, 253);
 	transform: translateY(-5px);
 }
 
