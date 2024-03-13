@@ -1,7 +1,8 @@
-import 'font-awesome/css/font-awesome.min.css';
 import React, { useEffect, useState } from 'react';
 import logo from '../assets/Gallery/Logo_personal.png';
 import '../assets/css/Navbar.css';
+// Importa font-awesome si es necesario para iconos adicionales
+import 'font-awesome/css/font-awesome.min.css';
 
 function Navbar() {
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -22,7 +23,7 @@ function Navbar() {
         <nav>
             <div className={showMenu ? 'header show-menu' : 'header'}>
                 <div className="logo-container">
-                    <a href="/" className="logo"> {/* Cambia el <a> por <Link> para la navegación principal */}
+                    <a href="/" className="logo">
                         <img src={logo} alt="Logo" className="logo-img"/>
                         <span className="logo-lnk">Jose Campos</span>
                     </a>
@@ -45,7 +46,14 @@ function Navbar() {
     );
 }
 
-function NavLink({ to, children }) {
+function NavLink({ to, children, download, href }) {
+    if (download) {
+        return (
+            <a href={href} download className="nav-link">
+                <button className="nav-button download-btn">{children}</button> {/* Añadir clase download-btn */}
+            </a>
+        );
+    }
     return (
         <a href={to} className="nav-link">
             <button className="nav-button">{children}</button>
@@ -53,13 +61,15 @@ function NavLink({ to, children }) {
     );
 }
 
+
 function Navigation() {
     return (
         <div className="menu">
             <NavLink to="#perfil">INICIO</NavLink>
             <NavLink to="#about">INFO</NavLink>
             <NavLink to="#resume">RESUME</NavLink>
-            {/* ... otros enlaces ... */}
+            <NavLink to="#contact">CONTACTO</NavLink>
+            <NavLink href="/files/currículum.pdf" download>DESCARGAR</NavLink> {/* Nuevo botón de descarga */}
         </div>
     );
 }

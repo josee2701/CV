@@ -1,0 +1,85 @@
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: #1f1f1f; /* Asegúrate de usar el color correcto de fondo */
+    color: white;
+}
+
+.contact-container h2, .contact-container p, .contact-container h3 {
+    color: #fff; /* o el color de tu preferencia */
+}
+
+form {
+    max-width: 400px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px; /* radio de borde para los campos de entrada */
+}
+form label,
+form input,
+form textarea,
+form button {
+    display: block; /* Establece los elementos como bloques, apilándolos verticalmente */
+    width: 100%; /* Cada elemento toma todo el ancho disponible */
+    margin-bottom: 15px; /* Espacio entre elementos */
+}
+
+/* Estilos adicionales para mejorar la apariencia */
+form input,
+form textarea {
+    padding: 10px; /* Espaciado interno para la entrada de texto */
+    border: 1px solid #ccc; /* Borde sutil */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+form button {
+    padding: 10px 15px;
+    background-color: #4CAF50; /* Cambia al color que prefieras */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #45a049; /* Color al pasar el mouse por encima */
+}
+
+button {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px; /* radio de borde para el botón */
+    background-color: #4CAF50; /* color de fondo del botón */
+    color: white; /* color del texto del botón */
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.contact-info {
+    background: #333; /* Color de fondo para el cuadro de información */
+    padding: 20px;
+    border-radius: 15px; /* Radio de borde redondeado para la caja */
+}
+
+.contact-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact-info ul li {
+    margin-bottom: 10px;
+}

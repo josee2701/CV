@@ -108,6 +108,21 @@ html {
 	scroll-behavior: smooth;
 }
 
+.download-btn {
+    border: 2px solid #4c77af; /* Borde verde, elige el color que prefieras */
+    border-radius: 15px; /* Bordes redondeados */
+    background-color: white;
+    color: #4c77af; /* Color de texto verde para hacer juego con el borde */
+    font-weight: bold; /* Texto en negrita */
+    padding: 10px 20px; /* Espaciado interno para hacer el botón más grande */
+    transition: background-color 0.3s, color 0.3s; /* Transición suave al cambiar de estado */
+}
+
+.download-btn:hover {
+    background-color: #4c77af; /* Cambiar el fondo al pasar el mouse */
+    color: white; /* Cambiar el color de texto al pasar el mouse */
+}
+
 
 @media (max-width: 1199px) {
 	.header {

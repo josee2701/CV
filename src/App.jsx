@@ -14,6 +14,7 @@ function App() {
       <Profile />
       <About />
       <Resume />
+      {/* <ContactSection /> */}
     </div>
   );
 }

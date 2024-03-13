@@ -5,9 +5,7 @@
     justify-content: center;
     position: relative;
     overflow: visible;
-    height: 100vh;
-    width: 100%;
-    max-width: 1200px;
+    height: auto;
     margin: auto;
     z-index: 11;
 }
@@ -23,8 +21,7 @@
     /* Ajusta según el ancho máximo deseado */
     margin: auto;
     /* Centra el contenedor en la página */
-    padding-top: 5%;
-    /* Espacio en la parte superior */
+    
 }
 
 .profile-title {
