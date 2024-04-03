@@ -5,8 +5,9 @@
     justify-content: center;
     position: relative;
     overflow: visible;
-    height: auto;
     margin: auto;
+    width: auto;
+    padding-top: 11%;
     z-index: 11;
 }
 

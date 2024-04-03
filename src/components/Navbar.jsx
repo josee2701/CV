@@ -50,7 +50,7 @@ function NavLink({ to, children, download, href }) {
     if (download) {
         return (
             <a href={href} download className="nav-link">
-                <button className="nav-button download-btn">{children}</button> {/* Añadir clase download-btn */}
+                <button className="nav-button download-btn">{children}</button> 
             </a>
         );
     }
@@ -69,7 +69,7 @@ function Navigation() {
             <NavLink to="#about">INFO</NavLink>
             <NavLink to="#resume">RESUME</NavLink>
             <NavLink to="#contact">CONTACTO</NavLink>
-            <NavLink href="/files/currículum.pdf" download>DESCARGAR</NavLink> {/* Nuevo botón de descarga */}
+            <NavLink href="/CV/files/curriculum.pdf" download>DESCARGAR</NavLink>
         </div>
     );
 }
