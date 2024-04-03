@@ -12,49 +12,30 @@
 	top: 40px;
 	height: 80px;
 	z-index: 100;
-	background: #333;
+	background: #585d65;
 	border-radius: 80px;
 	transition: all 0.7s cubic-bezier(0.165, 0.85, 0.45, 1);
-}
-
-.menu-btn {
-	display: none;
-	/* oculto por defecto */
-	/* ... otros estilos para el botón ... */
 }
 
 .logo-container {
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
+	color: #FFF;
 }
 
 .header .logo {
 	display: flex;
 	align-items: center;
-	/* Ajusta el padding si es necesario para posicionar correctamente el logo y el texto */
 	padding: 10px;
 }
 
 .header .logo img.logo-img {
 	height: auto;
 	max-height: 70px;
+	color: #FFF
 }
 
-.header .logo .logo-lnk {
-	/* Asegúrate de que el texto esté alineado al lado del logo */
-	margin-left: 10px;
-	/* espacio entre el logo y el texto */
-	font-size: 15px;
-	/* ajusta el tamaño del texto si es necesario */
-	display: flex;
-	align-items: center;
-	/* para alinear verticalmente si es necesario */
-	flex-direction: column;
-	/* para la presentación en dos líneas */
-	justify-content: center;
-	/* centra el contenido si el logo es más alto */
-}
 
 .header .logo-lnk {
 	display: block;
@@ -63,11 +44,19 @@
 	/* Alinea el texto a la izquierda */
 }
 
-.header .download-cv-btn {
+.menu-btn {
+	display: none;
+	/* oculto por defecto */
+	/* ... otros estilos para el botón ... */
+}
+.menu-btn {
+	display: none;
+	/* Mostrar botón de menú en móviles */
+	cursor: pointer;
 	float: right;
-	margin-top: 8px;
-	margin-right: 8px;
-	border-color: #FFF;
+	margin-top: 2px;
+	margin-right: 27px;
+	font-size: 30px;
 }
 
 .header .top-menu {
@@ -90,13 +79,13 @@
 
 /* Pseudo-clase para hover */
 .nav-button:hover {
-	color: red;
+	color: #072f4e;
 	transform: translateY(-5px);
 }
 
 /* Puedes añadir una clase adicional para el estado 'activo' si es necesario */
 .nav-button-active {
-	color: red;
+	color: rgb(15, 97, 221)ed;
 	transform: translateY(-5px);
 }
 
@@ -111,9 +100,29 @@
 }
 
 .button:hover {
-	color: red;
+	color: rgb(21, 114, 253);
 	transform: translateY(-5px);
 }
+
+html {
+	scroll-behavior: smooth;
+}
+
+.download-btn {
+    border: 2px solid #4c77af; /* Borde verde, elige el color que prefieras */
+    border-radius: 15px; /* Bordes redondeados */
+    background-color: white;
+    color: #4c77af; /* Color de texto verde para hacer juego con el borde */
+    font-weight: bold; /* Texto en negrita */
+    padding: 10px 20px; /* Espaciado interno para hacer el botón más grande */
+    transition: background-color 0.3s, color 0.3s; /* Transición suave al cambiar de estado */
+}
+
+.download-btn:hover {
+    background-color: #4c77af; /* Cambiar el fondo al pasar el mouse */
+    color: white; /* Cambiar el color de texto al pasar el mouse */
+}
+
 
 @media (max-width: 1199px) {
 	.header {
@@ -121,8 +130,7 @@
 		left: 0;
 		right: 0;
 		top: 20px;
-		background: none;
-		border-radius: 0;
+		border-radius: 80px;
 	}
 
 	.header .logo img.logo-img {
@@ -160,27 +168,19 @@
 	.menu-btn {
 		display: inline-block;
 		/* Mostrar botón de menú en móviles */
-		cursor: pointer;
-		float: right;
-		margin-top: 25px;
-		margin-right: 20px;
-		font-size: 40px;
-		/* Ajustar el tamaño aquí */
 	}
 
 	.show-menu .top-menu {
 		display: flex;
-		/* Mostrar menú cuando se haga clic en el botón de menú */
 		flex-direction: column;
 		align-items: flex-start;
 		position: absolute;
-		right: 20px;
-		top: 100px;
-		background-color: #333;
+		top: 80px;
+		/* Ajustado para alinear justo debajo del header */
+		right: 0;
+		background-color: #585d65;
 		border-radius: 10px;
 		padding: 10px;
-		z-index: 100;
-		/* Asegurarse de que el menú esté sobre otros elementos */
 	}
 
 	.nav-button {
@@ -199,12 +199,11 @@
 
 @media (max-width: 720px) {
 	.header {
-		padding: 0 30px;
-		left: 0;
-		right: 0;
-		top: 20px;
-		background: none;
+		padding: 0 15px;
+		/* Ajustado para pantallas más pequeñas */
 		border-radius: 0;
+		/* Opcional: quitar el border-radius en dispositivos muy pequeños */
+		border-radius: 80px;
 	}
 
 	.header .logo img.logo-img {
@@ -229,12 +228,6 @@
 	.menu-btn {
 		display: inline-block;
 		/* Mostrar botón de menú en móviles */
-		cursor: pointer;
-		float: right;
-		margin-top: 25px;
-		margin-right: 20px;
-		font-size: 24px;
-		/* Ajustar el tamaño aquí */
 	}
 
 	.show-menu .top-menu {
@@ -245,7 +238,6 @@
 		position: absolute;
 		right: 20px;
 		top: 100px;
-		background-color: #333;
 		border-radius: 10px;
 		padding: 10px;
 		z-index: 100;

@@ -1,13 +1,12 @@
-import 'font-awesome/css/font-awesome.min.css';
 import React, { useEffect, useState } from 'react';
 import logo from '../assets/Gallery/Logo_personal.png';
 import '../assets/css/Navbar.css';
+// Importa font-awesome si es necesario para iconos adicionales
+import 'font-awesome/css/font-awesome.min.css';
 
 function Navbar() {
-
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-    const [showMenu, setShowMenu] = useState(false); // Nuevo estado para manejar la visibilidad del menú
-
+    const [showMenu, setShowMenu] = useState(false);
 
     useEffect(() => {
         const handleResize = () => {
@@ -17,48 +16,62 @@ function Navbar() {
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, []);
-    const toggleMenu = () => {
-        setShowMenu(!showMenu); // Cambia el estado de visibilidad del menú
-    };
 
+    const toggleMenu = () => setShowMenu(!showMenu);
 
     return (
-        <nav >
+        <nav>
             <div className={showMenu ? 'header show-menu' : 'header'}>
-                <div className="logo-container"> {/* Asegúrate de que tanto el logo como el texto estén dentro de este contenedor */}
-                    <a href="#" className="logo">
-                        <img className="logo-img" src={logo} alt="Logo" />
+                <div className="logo-container">
+                    <a href="/" className="logo">
+                        <img src={logo} alt="Logo" className="logo-img"/>
+                        <span className="logo-lnk">Jose Campos</span>
                     </a>
-                    <span className="logo-lnk">Jose Campos</span>
                 </div>
-
                 <div className="menu-btn" onClick={toggleMenu}>
-                    <i className="fa fa-bars"></i> {/* Icono del menú, puede ser diferente */}
+                    <i className="fa fa-bars"></i>
                 </div>
-                <div className='top-menu'>
-                    <div className="menu">
-                        <a href="#section-started" className="nav-link">
-                            <button className="nav-button">
-                                INICIO
-                            </button>
-                        </a>
-                        <a href="#section-about" className="nav-link">
-                            <button className="nav-button">
-                                INFO
-                            </button>
-                        </a>
-                        <a href="#section-resumen" className="nav-link">
-                            <button className="nav-button">
-                                RESUME
-                            </button>
-                        </a>
-                        {/* ... otros botones ... */}
+                {isMobile && showMenu && (
+                    <div className='top-menu'>
+                        <Navigation />
                     </div>
-                </div>
+                )}
+                {!isMobile && (
+                    <div className='top-menu'>
+                        <Navigation />
+                    </div>
+                )}
             </div>
         </nav>
     );
 }
 
+function NavLink({ to, children, download, href }) {
+    if (download) {
+        return (
+            <a href={href} download className="nav-link">
+                <button className="nav-button download-btn">{children}</button> 
+            </a>
+        );
+    }
+    return (
+        <a href={to} className="nav-link">
+            <button className="nav-button">{children}</button>
+        </a>
+    );
+}
+
+
+function Navigation() {
+    return (
+        <div className="menu">
+            <NavLink to="#perfil">INICIO</NavLink>
+            <NavLink to="#about">INFO</NavLink>
+            <NavLink to="#resume">RESUME</NavLink>
+            <NavLink to="#contact">CONTACTO</NavLink>
+            <NavLink href="/CV/files/curriculum.pdf" download>DESCARGAR</NavLink>
+        </div>
+    );
+}
 
 export default Navbar;

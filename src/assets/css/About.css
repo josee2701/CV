@@ -1,139 +1,174 @@
-/* - Section */
-@import '@fortawesome/fontawesome-free/css/all.css';
 
-.section .titles .subtitle {
-	font-size: 14px;
-	line-height: 1.2;
-	color: #0c042b;
-	font-weight: 600;
-	text-transform: uppercase;
-	margin-inline-start: 45%;
+#about.profile-section {
+    width: auto;
+    height: auto;
+}
 
+#about .main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 88%;
+    max-width: 967px;
+    margin: auto;
+}
+
+/* Consolidación de estilos para títulos */
+.title {
+    font: size 10px;
+    ;
+}
+
+.title-right-shift,
+.title-right {
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+}
+
+.title-right-shift {
+    margin-left: 400px;
+    font-size: 52px;
+}
+
+.title-right {
+    font-size: 52px;
+    padding-left: 75px;
+
+}
+
+/* Estilos para subtítulos y contenidos */
+.subtitle-container,
+.subtitle {
+    font-size: 1rem;
+    line-height: 1.4;
+    font-weight: 700;
+    color: #041330;
+    word-break: break-word;
+    border-radius: 10px;
+    padding: 0.5em 1em;
+    display: inline-block;
+    background-color: #e0e0e0;
+}
+.subtitle-container2{
+    font-size: 1rem;
+    line-height: 1.4;
+    font-weight: 700;
+    color: #041330;
+    word-break: break-word;
+    border-radius: 10px;
+    padding: 0.5em 1em;
+    display: inline-block;
+    background-color: #e0e0e0;
+    margin-left: 4.5em;
+}
+
+/* Estilos para elementos de lista, iconos y texto */
+.name{
+    font-weight: 1000
+}
+.h-text,
+.name,
+p,
+.info-list li {
+    color: white;
 }
 
 .info-list {
-	margin-inline-start: 45%;
-	color: #ffffff;
-
+    list-style-type: none;
+    padding: 0;
 }
 
-.info-list ul li strong {
-	display: inline-block;
-	vertical-align: top;
-	width: 90px;
-	font-weight: 600;
-	text-transform: uppercase;
-	color: #0c042b;
+.info-list li strong {
+    color: black;
 }
 
-.single-post-text {
-	margin-inline-start: 45%;
-	color: #ffffff;
-	/* Ajusta el valor según sea necesario */
+.icon {
+    margin: 50px 0;
+    font-size: 36px;
+    color: #0c042b;
 }
 
-
+/* Flexbox y columnas de servicios */
 .service-items {
-	margin: 0 -10px;
-	/* Ajusta el valor según sea necesario */
-	display: flex;
-	flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding-left: 405px;
+    margin-left: 20px;
 }
 
-.service-items .service-col {
-	margin-bottom: 20px;
-	/* Ajusta el valor según sea necesario */
-	padding: 0 10px;
-	/* Ajusta el valor según sea necesario */
-	flex: 1 0 50%;
-	/* Divide en dos columnas */
+.service-col {
+    flex: 1 1 45%;
 }
 
-
-.service-item .icon {
-	margin-bottom: 10px;
-	/* Ajusta el valor según sea necesario */
-	font-size: 32px;
-	block-size: 32px;
-	color: #0c042b;
-	margin-inline-start: 45%;
-}
-
-.service-item .name {
-	margin: 0;
-	/* Ajusta el valor según sea necesario */
-	font-size: 18px;
-	color: #FFF;
-	font-weight: 800;
-	margin-inline-start: 45%;
-
-}
-
-
-/* Regla @media para dispositivos con ancho máximo de 1199px */
+/* Media queries para responsividad */
 @media (max-width: 1199px) {
 
-	.section .titles .title {
-		margin-block-end: 10px;
-		font-size: 55px;
-		line-height: 1.2;
-		color: #ffffff;
-		font-weight: 800;
-		transition: all 0.3s ease 0s;
-		-moz-transition: all 0.3s ease 0s;
-		-webkit-transition: all 0.3s ease 0s;
-		-o-transition: all 0.3s ease 0s;
-	}
+    #about.profile-section {
+        margin-bottom: auto;
+      }
+    #about .main-container {
+        padding-top: 5%;
+    }
 
+    .service-items {
+        display: block;
+    }
 
-	.section.started .h-title {
-		padding: 4.2vw;
-		font-size: 6.2vw;
-	}
+    .title,
+    .title-right-shift,
+    .title-right,
+    .h-text,
+    .info-list,
+    .service-items {
+        margin-left: 0;
+        text-align: center;
+        padding-left: 0;
+        
+    }
 
-	.section.started .started-content .h-subtitles {
-		margin: 0 0 53px 22vw;
-		font-size: 24px;
-	}
-
-	.section.started .started-content .h-text {
-		margin: 0 0 27px 9vw;
-	}
+    .title-right-shift, 
+    .title-right{
+        font-size: 2.5rem;
+    }
+    .subtitle-container2{
+        
+        margin: auto;
+    }
 }
 
-/* Regla @media para dispositivos con ancho máximo de 720px */
+
 @media (max-width: 720px) {
-	.section.started {
-		padding-inline-start: 2px;
-		padding-block-end: 21px;
-		block-size: 95vw;
-		inset-inline-start: 33;
-	}
+    .about {
+        text-align: center;
+    }
 
-	.section .titles .title {
-		margin-block-end: 10px;
-		max-inline-size: 70%;
-		font-size: 55px;
-		line-height: 1.2;
-		color: #ffffff;
-		font-weight: 800;
-		transition: all 0.3s ease 0s;
-		-moz-transition: all 0.3s ease 0s;
-		-webkit-transition: all 0.3s ease 0s;
-		-o-transition: all 0.3s ease 0s;
-	}
+    .title {
+        right: 20px;
+    }
 
-	.section.started .h-title {
-		padding: 6.2vw;
-		font-size: 5.2vw;
-	}
+    .subtitle {
+        font-size: 1rem;
+        line-height: 1.4;
+        font-weight: 700;
+        color: #041330;
+        word-break: break-word;
+        border-radius: 10px;
+        padding: 0.5em 1em;
+        display: inline-block;
+        background-color: #e0e0e0;
+        margin: 0.5em;
 
-	.section.started .started-content .h-subtitles {
-		margin: 0 0 52px 26vw;
-		block-size: 22px;
-	}
+    }
 
-	.section.started .started-content .h-text {
-		margin: 0 0 16px 8vw;
-	}
+    .h-text {
+        text-align: center;
+    }
+
+    .info-list {
+        text-align: center;
+        padding: 0.5em 1em;
+    }
 }

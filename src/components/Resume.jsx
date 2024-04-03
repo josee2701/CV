@@ -1,92 +1,49 @@
 import React from 'react';
-import '../assets/css/Resume.css';
 import '../assets/css/General.css';
+import '../assets/css/Resume.css';
 
 function About(props) {
     return (
-        <div className="section resume" id="section-resumen">
-            <div className="centrize full-width">
+        <div className="profile-section" id="resume">
+            <div className="centrize main-container">
 
-                <div className="titles">
-                    <div className="title">Experiencia</div>
-                    <div className="subtitles">Trabajos</div>
-                </div>
+                <div className="title title-right-shift">Experiencia</div>
+                <div className="subtitle-container">Trabajos</div>
 
-
-                <div className="owl-item active">
-                    <div className="item">
-                        <div className="resume-item active">
-                            <div className="date">Presente</div>
-                            <div className="name">Desarollador <br />Full Stack</div>
-                            <div className="single-post-text">
-                                <p>
-                                    Diseñar y desarrollar componentes y características de software utilizando lenguajes y herramientas apropiados, con un enfoque en la mejora continua de la infraestructura.
-                                    <br /><br />- Realizar pruebas exhaustivas y depuración de código para garantizar el rendimiento y la confiabilidad del software antes de su implementación.
-                                    <br /><br />- Documentar el código y las características del software para facilitar el mantenimiento y la actualización, contribuyendo al desarrollo de documentación detallada sobre la infraestructura.
-                                    <br /><br />- Dirigir las implementaciones en producción utilizando tecnologías avanzadas como Kubernetes y Docker, asegurando una transición fluida y eficiente de las nuevas versiones del software.
-                                    <br /><br />- Participar activamente en reuniones y discusiones técnicas con el equipo de desarrollo, compartiendo ideas y soluciones para la optimización del proceso de implementación y la infraestructura.
-                                    <br /><br />- Continuar mi formación y desarrollo profesional, manteniéndome actualizado en las últimas tendencias y tecnologías en el campo del desarrollo de software.
-                                    <br />Mi enfoque en la gestión del proceso de implementación y la mejora de la infraestructura garantiza la entrega exitosa de soluciones de software de alta calidad y un rendimiento óptimo en producción.
-                                </p>
-                            </div>
+                <div className="service-items">
+                    <div className="service-col">
+                        <div className='service'>
+                            <div className="date">Nov 2022-actualidad</div>
+                            <div className="name">Desarrollo Full Satck</div>
                         </div>
+
+                        <p> Experiencia como desarrollador full-stack, me especializo en Python y Django para el desarrollo de proyectos, incluyendo la creación de APIs personalizadas que interactúan eficazmente con React, asegurando soluciones integrales y dinámicas para las necesidades del negocio.</p>
+                    </div>
+
+                    <div className="service-col">
+                        <div className='service'>
+
+                            <div className="date">Sep 2020- Nov 2022</div>
+
+                            <div className="name">Gestor de clientes</div>
+                        </div>
+                        <p> Mi rol implicaba dialogar directamente para identificar y comprender sus necesidades o problemas, con el objetivo de encontrar soluciones consensuadas. Destacaba en explicar detalladamente soluciones o información necesaria, asegurando una comprensión clara de sus inquietudes y fortaleciendo la relación cliente-empresa.</p>
                     </div>
                 </div>
-                {/* <div className="owl-item active">
-                    <div className="item">
-                        <div className="resume-item">
-                            <div className="date">2016-2018</div>
-                            <div className="name">Red <br />Drifting</div>
-                            <div className="single-post-text">
-                                <p>
-                                    Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="owl-item">
-                    <div className="item">
-                        <div className="resume-item">
-                            <div className="date">2014-2016</div>
-                            <div className="name">World <br />Economy</div>
-                            <div className="single-post-text">
-                                <p>
-                                    Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="owl-item">
-                    <div className="item">
-                        <div className="resume-item">
-                            <div className="date">2012-2014</div>
-                            <div className="name">Art Director <br />Facebook</div>
-                            <div className="single-post-text">
-                                <p>
-                                    Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div> */}
+                <div className="title title-right-shift">Eduación</div>
+                <div className="subtitle-container">Estudió en</div>
 
-
-                {/* <div className="owl-nav disabled">
-                    <button type="button" role="presentation" className="owl-prev"><span aria-label="Previous">‹</span></button>
-                    <button type="button" role="presentation" className="owl-next"><span aria-label="Next">›</span></button>
+                <div className="service-items">
+                    <div className="service-col">
+                        <div className='service'>
+                            <div className="date">Febrero 2019-actualidad</div>
+                            <div className="name">Ingeniero de Sistemas</div>
+                        </div>
+                        <p> Estudiante de último año en Ingeniería de Sistemas con experiencia en metodologías ágiles y ciberseguridad. Me especializo en desarrollo de software, utilizando Python, Django, Docker, Kubernetes, HTML, CSS, JS y React. Mi objetivo es continuar aprendiendo e innovando en tecnología</p>
+                    </div>
                 </div>
-                <div className="owl-dots disabled"></div> */}
             </div>
-
-            {/* <div className="navs">
-                <span className="prev fas fa-chevron-left"></span>
-                <span className="next fas fa-chevron-right"></span>
-            </div> */}
-
         </div>
-
     );
 }
 

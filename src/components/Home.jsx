@@ -4,13 +4,14 @@ import '../assets/css/Home.css';
 
 function Home(props) {
   return (
-    <div className="background-bg">
-      <div className="profileContainer background-filter circle">
-        <div className="background-img" style={{ backgroundImage: `url(${profileImage})` }}></div>
+    // Asegúrate de que el id "home" aquí coincida con el href="#home" en tu Navbar
+    <div id="home" className="home-section">
+      <div className="profile-container">
+        <img src={profileImage} alt="Profile" className="profile-image" />
+        {/* Otros elementos de tu sección Home... */}
       </div>
     </div>
   );
 }
-
 
 export default Home;

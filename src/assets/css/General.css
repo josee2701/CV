@@ -1,47 +1,39 @@
-.section {
-    position: relative;
-    overflow: hidden;
-    padding-inline-start: 6%;
-    padding-inline-end: 3%;
-    padding-block-start: 130px;
+/* Variables CSS para colores y tamaños comunes */
+:root {
+    --color-title: #ffffff;
+    --color-subtitle: #0c042b;
 }
 
-.section .titles .title {
-    margin-block-end: 10px;
-    max-inline-size: 70%;
-    font-size: 55px;
+.title {
     line-height: 1.2;
-    color: #ffffff;
+    color: var(--color-title);
     font-weight: 800;
-    margin: 0 0 0 40vw;
-    transition: all 0.3s ease 0s;
-    -moz-transition: all 0.3s ease 0s;
-    -webkit-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
 }
 
-.section .titles .subtitle {
-    font-size: 14px;
-    line-height: 1.2;
-    color: #0c042b;
+.subtitle {
+    font-size: 1rem;
+    line-height: 3.2;
+    color: var(--color-subtitle);
     font-weight: 600;
     text-transform: uppercase;
-    margin-inline-start: 45%;
-
 }
 
 /* Regla @media para dispositivos con ancho máximo de 1199px */
 @media (max-width: 1199px) {
-    .section .titles .title {
-        margin-block-end: 10px;
-        font-size: 55px;
-        line-height: 1.2;
-        color: #ffffff;
-        font-weight: 800;
-        transition: all 0.3s ease 0s;
-        -moz-transition: all 0.3s ease 0s;
-        -webkit-transition: all 0.3s ease 0s;
-        -o-transition: all 0.3s ease 0s;
+    .title {
+        font-size: 45px; /* Ajusta el tamaño de fuente para dispositivos más pequeños */
     }
+    .subtitle {
+        /* Si necesitas ajustes para el subtítulo aquí */
+    }
+}
 
+/* Considera agregar más reglas @media para tamaños de pantalla más pequeños */
+@media (max-width: 768px) {
+    .title {
+        font-size: 35px; /* Más ajustes para pantallas aún más pequeñas */
+    }
+    .subtitle {
+        font-size: 12px;
+    }
 }
