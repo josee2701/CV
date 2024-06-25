@@ -1,36 +1,51 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../assets/css/Contact.css';
 import '../assets/css/General.css';
 
 const ContactSection = () => {
-    // const [formData, setFormData] = useState({
-    //     firstName: '',
-    //     lastName: '',
-    //     email: '',
-    //     phone: '',
-    //     message: '',
-    // });
+    const [formData, setFormData] = useState({
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        message: '',
+    });
 
-    // const handleChange = (e) => {
-    //     const { name, value } = e.target;
-    //     setFormData(prevState => ({
-    //         ...prevState,
-    //         [name]: value,
-    //     }));
-    // };
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData(prevState => ({
+            ...prevState,
+            [name]: value,
+        }));
+    };
 
-    // const handleSubmit = (e) => {
-    //     e.preventDefault();
-    //     // Aquí manejarías el envío del formulario, por ejemplo, enviándolo a un servidor
-    //     console.log(formData);
-    // };
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        
+        fetch('http://localhost:8000/contact/from_contact/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Success:', data);
+            // Aquí puedes manejar la respuesta exitosa, por ejemplo, mostrar un mensaje de éxito
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+            // Aquí puedes manejar los errores, por ejemplo, mostrar un mensaje de error
+        });
+    };
 
     return (
         <div className="profile-section" id="contact">
             <div className="centrize main-container">
-            <div className="title title-right-shift" style={{ marginLeft: '0px' }}>Contact</div>
-            <div className="subtitle-container">LET'S TALK</div>
-                {/* <form onSubmit={handleSubmit}>
+                <div className="title title-right-shift" style={{ marginLeft: '0px' }}>Contact</div>
+                <div className="subtitle-container">LET'S TALK</div>
+                <form onSubmit={handleSubmit}>
                     <div className="grid grid-cols-1 gap-5 md:grid-cols-2 mt-5">
                         <input
                             className="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
@@ -82,7 +97,7 @@ const ContactSection = () => {
                             Send Message
                         </button>
                     </div>
-                </form> */}
+                </form>
                 <div className="contact-info" style={{ borderLeftWidth: '30px', marginLeft: '250px', margin: '50px'}}>
                     <h3>Jose Campos</h3>
                     <p>Ingeniero de sistemas</p>
