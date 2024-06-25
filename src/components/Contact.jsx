@@ -22,7 +22,7 @@ const ContactSection = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         
-        fetch('http://localhost:8000/from_contact/', {
+        fetch('https://backend-yw41.onrender.com/from_contact/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
