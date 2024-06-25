@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Confetti from 'react-confetti';
 import '../assets/css/Contact.css';
 import '../assets/css/General.css';
 
@@ -10,6 +11,9 @@ const ContactSection = () => {
         phone: '',
         message: '',
     });
+
+    const [showModal, setShowModal] = useState(false);
+    const [showConfetti, setShowConfetti] = useState(false);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -32,7 +36,22 @@ const ContactSection = () => {
         .then(response => response.json())
         .then(data => {
             console.log('Success:', data);
-            // Aquí puedes manejar la respuesta exitosa, por ejemplo, mostrar un mensaje de éxito
+            // Limpiar el formulario
+            setFormData({
+                name: '',
+                apellido: '',
+                email: '',
+                phone: '',
+                message: '',
+            });
+            // Mostrar la ventana emergente de éxito y confeti
+            setShowModal(true);
+            setShowConfetti(true);
+            // Ocultar el modal y el confeti después de 5 segundos
+            setTimeout(() => {
+                setShowModal(false);
+                setShowConfetti(false);
+            }, 5000);
         })
         .catch((error) => {
             console.error('Error:', error);
@@ -42,6 +61,7 @@ const ContactSection = () => {
 
     return (
         <div className="profile-section" id="contact">
+            {showConfetti && <Confetti />}
             <div className="centrize main-container">
                 <div className="title title-right-shift" style={{ marginLeft: '0px' }}>Contact</div>
                 <div className="subtitle-container">LET'S TALK</div>
@@ -110,6 +130,14 @@ const ContactSection = () => {
                     </ul>
                 </div>
             </div>
+
+            {showModal && (
+                <div className="modal">
+                    <div className="modal-content">
+                        <h4 style={{color: 'black'}}>¡El mensaje se ha enviado correctamente!</h4>
+                    </div>
+                </div>
+            )}
         </div>
     );
 };
