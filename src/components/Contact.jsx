@@ -4,8 +4,8 @@ import '../assets/css/General.css';
 
 const ContactSection = () => {
     const [formData, setFormData] = useState({
-        firstName: '',
-        lastName: '',
+        name: '',
+        apellido: '',
         email: '',
         phone: '',
         message: '',
@@ -22,7 +22,7 @@ const ContactSection = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         
-        fetch('http://localhost:8000/contact/from_contact/', {
+        fetch('http://localhost:8000/from_contact/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -51,16 +51,16 @@ const ContactSection = () => {
                             className="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
                             type="text"
                             placeholder="First Name*"
-                            name="firstName"
-                            value={formData.firstName}
+                            name="name"
+                            value={formData.name}
                             onChange={handleChange}
                         />
                         <input
                             className="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
                             type="text"
                             placeholder="Last Name*"
-                            name="lastName"
-                            value={formData.lastName}
+                            name="apellido"
+                            value={formData.apellido}
                             onChange={handleChange}
                         />
                         <input
