@@ -9,6 +9,10 @@
 .contact-container h2, .contact-container p, .contact-container h3 {
     color: #fff; /* o el color de tu preferencia */
 }
+.grid-cols-1 {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 
 form {
     max-width: 400px;
@@ -20,18 +24,18 @@ form label {
 }
 
 form input, form textarea {
-    width: 100%;
+    width: 160px;
     padding: 10px;
     margin-bottom: 20px;
     border: none;
     border-radius: 5px; /* radio de borde para los campos de entrada */
+    margin-right: 10px
 }
 form label,
 form input,
 form textarea,
 form button {
     display: block; /* Establece los elementos como bloques, apilándolos verticalmente */
-    width: 100%; /* Cada elemento toma todo el ancho disponible */
     margin-bottom: 15px; /* Espacio entre elementos */
 }
 
