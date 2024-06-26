@@ -14,14 +14,6 @@ root.render(
   </React.StrictMode>
 );
 
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register(`${process.env.PUBLIC_URL}/serviceWorker.js`)
-      .then((registration) => {
-          console.log('Service Worker registered with scope:', registration.scope);
-      }).catch((error) => {
-          console.log('Service Worker registration failed:', error);
-      });
-}
 
 // Si quieres empezar a medir el rendimiento en tu aplicación, pasa una función
 // para registrar los resultados (por ejemplo: reportWebVitals(console.log))

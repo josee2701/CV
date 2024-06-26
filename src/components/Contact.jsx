@@ -39,17 +39,21 @@ const ContactSection = () => {
             message: '',
         });
 
-        // Enviar la solicitud al backend
-        navigator.serviceWorker.ready.then((registration) => {
-            registration.active.postMessage({
-                url: 'https://backend-yw41.onrender.com/from_contact/',
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData),
+        console.log('Sending POST request...');
+        fetch('https://backend-yw41.onrender.com/from_contact/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data);
+            })
+            .catch(error => {
+                console.error('Error:', error);
             });
-        });
     };
 
     return (

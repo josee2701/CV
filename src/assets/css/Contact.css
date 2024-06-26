@@ -11,7 +11,8 @@ form input,
 form textarea,
 form button {
     display: block;
-    margin-bottom: 15px; /* Espacio entre elementos */
+    margin-bottom: 15px;
+    /* Espacio entre elementos */
 }
 
 form input,
@@ -58,7 +59,8 @@ textarea {
     border-radius: 16px;
     margin-left: 265px;
     border-left-width: 30px;
-    text-align: start; /* Centra el texto dentro del contenedor */
+    text-align: start;
+    /* Centra el texto dentro del contenedor */
 
 }
 
@@ -83,7 +85,7 @@ textarea {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .modal-content {
@@ -107,14 +109,18 @@ textarea {
 /* Reglas @media para dispositivos con ancho máximo de 1199px */
 @media (max-width: 1199px) {
     form {
-        width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
-    max-width: 600px; /* Ancho máximo para el formulario */
-    margin:auto
+        width: 100%;
+        /* Asegura que ocupe todo el ancho del contenedor */
+        max-width: 600px;
+        /* Ancho máximo para el formulario */
+        margin: auto
     }
+
     .contact-info {
-        margin:auto;
-        text-align: center; /* Centra el texto dentro del contenedor */
+        margin: auto;
+        text-align: center;
+        /* Centra el texto dentro del contenedor */
     }
 }
-@media (max-width: 720px) {
-}
+
+@media (max-width: 720px) {}
