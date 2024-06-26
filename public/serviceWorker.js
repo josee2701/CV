@@ -1,28 +1,36 @@
+self.addEventListener('sync', (event) => {
+    if (event.tag === 'sync-requests') {
+        event.waitUntil(syncRequests());
+    }
+});
+
+const syncRequests = async () => {
+    const db = await openDB('contact-form', 1);
+    const tx = db.transaction('requests', 'readonly');
+    const store = tx.objectStore('requests');
+    const allRequests = await store.getAll();
+    for (const request of allRequests) {
+        try {
+            const response = await fetch('https://backend-yw41.onrender.com/from_contact/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(request),
+            });
+            const result = await response.json();
+            console.log('Success:', result);
+        } catch (error) {
+            console.error('Error:', error);
+        }
+    }
+    await tx.done;
+};
+
 self.addEventListener('install', (event) => {
     console.log('Service Worker installing.');
 });
 
 self.addEventListener('activate', (event) => {
     console.log('Service Worker activating.');
-});
-
-self.addEventListener('message', async (event) => {
-    console.log('Service Worker received a message:', event.data); // Verificar recepción del mensaje
-    const { url, method, headers, body } = event.data;
-    if (method === 'POST' && url.includes('/from_contact/')) {
-        const request = new Request(url, {
-            method,
-            headers: new Headers(headers),
-            body,
-        });
-
-        try {
-            const response = await fetch(request);
-            console.log('Request sent to the server, status:', response.status); // Verificar solicitud al servidor
-            event.ports[0].postMessage({ status: response.status });
-        } catch (error) {
-            console.error('Network error:', error);
-            event.ports[0].postMessage({ status: 'Network error' });
-        }
-    }
 });

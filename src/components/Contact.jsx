@@ -1,3 +1,6 @@
+import { faFacebook, faGithub, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { openDB } from 'idb';
 import React, { useState } from 'react';
 import Confetti from 'react-confetti';
 import '../assets/css/Contact.css';
@@ -23,6 +26,32 @@ const ContactSection = () => {
         }));
     };
 
+    const saveFormData = async (data) => {
+        const db = await openDB('contact-form', 1, {
+            upgrade(db) {
+                db.createObjectStore('requests', { autoIncrement: true });
+            },
+        });
+        await db.add('requests', data);
+    };
+
+    const sendFormData = async (data) => {
+        try {
+            const response = await fetch('https://backend-yw41.onrender.com/from_contact/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            });
+            const result = await response.json();
+            console.log('Success:', result);
+        } catch (error) {
+            console.error('Error:', error);
+            await saveFormData(data);
+        }
+    };
+
     const handleSubmit = (e) => {
         e.preventDefault();
         setShowModal(true);
@@ -39,21 +68,14 @@ const ContactSection = () => {
             message: '',
         });
 
-        console.log('Sending POST request...');
-        fetch('https://backend-yw41.onrender.com/from_contact/', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(formData),
-        })
-            .then(response => response.json())
-            .then(data => {
-                console.log('Success:', data);
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
+        sendFormData(formData);
+
+        setTimeout(async () => {
+            if (await navigator.serviceWorker.ready) {
+                const registration = await navigator.serviceWorker.ready;
+                registration.sync.register('sync-requests');
+            }
+        }, 120000);
     };
 
     return (
@@ -125,6 +147,20 @@ const ContactSection = () => {
                         <li><strong>Ubicación: </strong> Bogotá, Colombia</li>
                         <li><strong>Correo: </strong> j.camposs2701@gmail.com</li>
                     </ul>
+                </div>
+                <div className="social-icons">
+                    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                        <FontAwesomeIcon icon={faFacebook} size="2x" />
+                    </a>
+                    <a href="https://www.instagram.com/joseee_2701/" target="_blank" rel="noopener noreferrer">
+                        <FontAwesomeIcon icon={faInstagram} size="2x" />
+                    </a>
+                    <a href="www.linkedin.com/in/josee-py" target="_blank" rel="noopener noreferrer">
+                        <FontAwesomeIcon icon={faLinkedin} size="2x" />
+                    </a>
+                    <a href="https://github.com/josee2701" target="_blank" rel="noopener noreferrer">
+                        <FontAwesomeIcon icon={faGithub} size="2x" />
+                    </a>
                 </div>
             </div>
 
