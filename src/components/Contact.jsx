@@ -25,37 +25,30 @@ const ContactSection = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        
-        fetch('https://backend-yw41.onrender.com/from_contact/', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(formData),
-        })
-        .then(response => response.json())
-        .then(data => {
-            console.log('Success:', data);
-            // Limpiar el formulario
-            setFormData({
-                name: '',
-                apellido: '',
-                email: '',
-                phone: '',
-                message: '',
+        setShowModal(true);
+        setShowConfetti(true);
+        setTimeout(() => {
+            setShowModal(false);
+            setShowConfetti(false);
+        }, 3000);
+        setFormData({
+            name: '',
+            apellido: '',
+            email: '',
+            phone: '',
+            message: '',
+        });
+
+        // Enviar la solicitud al backend
+        navigator.serviceWorker.ready.then((registration) => {
+            registration.active.postMessage({
+                url: 'https://backend-yw41.onrender.com/from_contact/',
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
             });
-            // Mostrar la ventana emergente de éxito y confeti
-            setShowModal(true);
-            setShowConfetti(true);
-            // Ocultar el modal y el confeti después de 5 segundos
-            setTimeout(() => {
-                setShowModal(false);
-                setShowConfetti(false);
-            }, 5000);
-        })
-        .catch((error) => {
-            console.error('Error:', error);
-            // Aquí puedes manejar los errores, por ejemplo, mostrar un mensaje de error
         });
     };
 
@@ -109,7 +102,7 @@ const ContactSection = () => {
                             onChange={handleChange}
                         ></textarea>
                     </div>
-                    <div className="my-2 w-1/2 lg:w-1/4">
+                    <div className="button-container">
                         <button
                             type="submit"
                             className="uppercase text-sm font-bold tracking-wide bg-blue-900 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline"
@@ -118,7 +111,7 @@ const ContactSection = () => {
                         </button>
                     </div>
                 </form>
-                <div className="contact-info" style={{ borderLeftWidth: '30px', marginLeft: '250px', margin: '50px'}}>
+                <div className="contact-info">
                     <h3>Jose Campos</h3>
                     <p>Ingeniero de sistemas</p>
                     <ul className="info-list">
@@ -134,7 +127,7 @@ const ContactSection = () => {
             {showModal && (
                 <div className="modal">
                     <div className="modal-content">
-                        <h4 style={{color: 'black'}}>¡El mensaje se ha enviado correctamente!</h4>
+                        <h4 style={{ color: 'black' }}>¡El mensaje se ha enviado correctamente!</h4>
                     </div>
                 </div>
             )}
