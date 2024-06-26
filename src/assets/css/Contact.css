@@ -121,6 +121,11 @@ textarea {
         text-align: center;
         /* Centra el texto dentro del contenedor */
     }
+    form input,
+    form textarea {
+    width: auto;
+    
+}
 }
 
 @media (max-width: 720px) {}
