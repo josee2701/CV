@@ -8,3 +8,32 @@
     font-size: 0.875rem;
     font-weight: 700;
 }
+
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 265px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: #e2dddd;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #1385ff;
+}
+
+/* Reglas @media para dispositivos con ancho máximo de 1199px */
+@media (max-width: 1199px) {
+    .social-icons {
+        margin:auto;
+        padding: 5px;
+    }
+    
+    
+}

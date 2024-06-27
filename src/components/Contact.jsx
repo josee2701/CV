@@ -1,5 +1,3 @@
-import { faFacebook, faGithub, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { openDB } from 'idb';
 import React, { useState } from 'react';
 import Confetti from 'react-confetti';
@@ -33,9 +31,11 @@ const ContactSection = () => {
             },
         });
         await db.add('requests', data);
+        console.log('Datos guardados en IndexedDB:', data);
     };
 
     const sendFormData = async (data) => {
+        console.log('Enviando datos del formulario:', data);
         try {
             const response = await fetch('https://backend-yw41.onrender.com/from_contact/', {
                 method: 'POST',
@@ -45,9 +45,9 @@ const ContactSection = () => {
                 body: JSON.stringify(data),
             });
             const result = await response.json();
-            console.log('Success:', result);
+            console.log('Éxito en el envío:', result);
         } catch (error) {
-            console.error('Error:', error);
+            console.error('Error en el envío:', error);
             await saveFormData(data);
         }
     };
@@ -74,6 +74,7 @@ const ContactSection = () => {
             if (await navigator.serviceWorker.ready) {
                 const registration = await navigator.serviceWorker.ready;
                 registration.sync.register('sync-requests');
+                console.log('Sincronización de fondo registrada');
             }
         }, 120000);
     };
@@ -147,20 +148,6 @@ const ContactSection = () => {
                         <li><strong>Ubicación: </strong> Bogotá, Colombia</li>
                         <li><strong>Correo: </strong> j.camposs2701@gmail.com</li>
                     </ul>
-                </div>
-                <div className="social-icons">
-                    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-                        <FontAwesomeIcon icon={faFacebook} size="2x" />
-                    </a>
-                    <a href="https://www.instagram.com/joseee_2701/" target="_blank" rel="noopener noreferrer">
-                        <FontAwesomeIcon icon={faInstagram} size="2x" />
-                    </a>
-                    <a href="www.linkedin.com/in/josee-py" target="_blank" rel="noopener noreferrer">
-                        <FontAwesomeIcon icon={faLinkedin} size="2x" />
-                    </a>
-                    <a href="https://github.com/josee2701" target="_blank" rel="noopener noreferrer">
-                        <FontAwesomeIcon icon={faGithub} size="2x" />
-                    </a>
                 </div>
             </div>
 

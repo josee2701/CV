@@ -5,6 +5,11 @@ import App from './App';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 
+import { initDB } from 'react-indexed-db-hook';
+import { DBConfig } from './indexedDBConfig';
+
+initDB(DBConfig);
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -14,12 +19,12 @@ root.render(
   </React.StrictMode>
 );
 
-if ('serviceWorker' in navigator) {
+if ('serviceWorker' in navigator && 'SyncManager' in window) {
   window.addEventListener('load', () => {
       navigator.serviceWorker.register(`${process.env.PUBLIC_URL}/serviceWorker.js`).then((registration) => {
-          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+          console.log('Registro de ServiceWorker exitoso con el alcance: ', registration.scope);
       }, (error) => {
-          console.log('ServiceWorker registration failed: ', error);
+          console.log('Registro de ServiceWorker fallido: ', error);
       });
   });
 }

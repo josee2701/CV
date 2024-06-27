@@ -106,23 +106,6 @@ textarea {
     grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.social-icons {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 265px;
-}
-
-.social-icons a {
-    margin: 0 10px;
-    color: #e2dddd;
-    transition: color 0.3s;
-}
-
-.social-icons a:hover {
-    color: #1385ff;
-}
 
 /* Reglas @media para dispositivos con ancho máximo de 1199px */
 @media (max-width: 1199px) {
@@ -143,8 +126,6 @@ textarea {
         text-align: center;
         /* Centra el texto dentro del contenedor */
     }
-    
-    
 }
 
 
