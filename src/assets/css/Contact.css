@@ -1,9 +1,16 @@
 /* Form Styles */
+#contact .main-container {
+    margin: 21px auto;
+}
+
+#contact .title-right-shift,
+#contact .title-right {
+    padding: 28px;
+}
 form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: 265px;
 }
 
 form label,
@@ -23,6 +30,7 @@ form textarea {
     border: 1px solid #ccc;
     border-radius: 12px;
     margin-right: 10px;
+    margin-left: 10px;
 }
 
 form button {
@@ -57,7 +65,6 @@ textarea {
     background: #a7a6a69f;
     padding: 20px;
     border-radius: 16px;
-    margin-left: 265px;
     border-left-width: 30px;
     text-align: start;
     /* Centra el texto dentro del contenedor */
