@@ -30,11 +30,10 @@ function About(props) {
                         <p> Mi rol implicaba dialogar directamente para identificar y comprender sus necesidades o problemas, con el objetivo de encontrar soluciones consensuadas. Destacaba en explicar detalladamente soluciones o información necesaria, asegurando una comprensión clara de sus inquietudes y fortaleciendo la relación cliente-empresa.</p>
                     </div>
                 </div>
-                <div className="title title-right-shift">Eduación</div>
-                <div className="subtitle-container">Estudió en</div>
-
-                <div className="service-items">
-                    <div className="service-col">
+                <div className="title title-right-shift">Educación</div>
+                <div className="subtitle-container">Estudios</div>
+                <div className="service-items" >
+                    <div className="service-col" style={{ maxWidth: '600px', margin: '0 auto' }}>
                         <div className='service'>
                             <div className="date">Febrero 2019-actualidad</div>
                             <div className="name">Ingeniero de Sistemas</div>

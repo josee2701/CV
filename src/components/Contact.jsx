@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import { openDB } from 'idb';
+import React, { useEffect, useState } from 'react';
 import Confetti from 'react-confetti';
 import '../assets/css/Contact.css';
 import '../assets/css/General.css';
@@ -15,6 +16,14 @@ const ContactSection = () => {
     const [showModal, setShowModal] = useState(false);
     const [showConfetti, setShowConfetti] = useState(false);
 
+    useEffect(() => {
+        // Recuperar datos del localStorage al cargar la página
+        const savedFormData = localStorage.getItem('contactFormData');
+        if (savedFormData) {
+            setFormData(JSON.parse(savedFormData));
+        }
+    }, []);
+
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData(prevState => ({
@@ -23,19 +32,39 @@ const ContactSection = () => {
         }));
     };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        
-        fetch('https://backend-yw41.onrender.com/from_contact/', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
+    const saveFormData = async (data) => {
+        const db = await openDB('contact-form', 1, {
+            upgrade(db) {
+                db.createObjectStore('requests', { autoIncrement: true });
             },
-            body: JSON.stringify(formData),
-        })
-        .then(response => response.json())
-        .then(data => {
-            console.log('Success:', data);
+        });
+        await db.add('requests', data);
+        console.log('Datos guardados en IndexedDB:', data);
+    };
+
+    const sendFormData = async (data) => {
+        try {
+            const response = await fetch('https://backend-yw41.onrender.com/from_contact/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            });
+
+            if (!response.ok) {
+                throw new Error('Error en la respuesta del servidor');
+            }
+
+            const result = await response.json();
+
+            // Eliminar datos de localStorage si la solicitud es exitosa
+            localStorage.removeItem('contactFormData');
+
+            // Mostrar el modal y el confeti
+            setShowModal(true);
+            setShowConfetti(true);
+
             // Limpiar el formulario
             setFormData({
                 name: '',
@@ -44,19 +73,25 @@ const ContactSection = () => {
                 phone: '',
                 message: '',
             });
-            // Mostrar la ventana emergente de éxito y confeti
-            setShowModal(true);
-            setShowConfetti(true);
-            // Ocultar el modal y el confeti después de 5 segundos
+
+            // Ocultar el modal y el confeti después de 3 segundos
             setTimeout(() => {
                 setShowModal(false);
                 setShowConfetti(false);
-            }, 5000);
-        })
-        .catch((error) => {
-            console.error('Error:', error);
-            // Aquí puedes manejar los errores, por ejemplo, mostrar un mensaje de error
-        });
+            }, 3000);
+        } catch (error) {
+            console.error('Error en el envío:', error);
+            await saveFormData(data);
+        }
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        // Guardar los datos en localStorage antes de enviarlos
+        localStorage.setItem('contactFormData', JSON.stringify(formData));
+
+        sendFormData(formData);
     };
 
     return (
@@ -109,7 +144,7 @@ const ContactSection = () => {
                             onChange={handleChange}
                         ></textarea>
                     </div>
-                    <div className="my-2 w-1/2 lg:w-1/4">
+                    <div className="button-container">
                         <button
                             type="submit"
                             className="uppercase text-sm font-bold tracking-wide bg-blue-900 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline"
@@ -118,7 +153,7 @@ const ContactSection = () => {
                         </button>
                     </div>
                 </form>
-                <div className="contact-info" style={{ borderLeftWidth: '30px', marginLeft: '250px', margin: '50px'}}>
+                <div className="contact-info">
                     <h3>Jose Campos</h3>
                     <p>Ingeniero de sistemas</p>
                     <ul className="info-list">
@@ -134,7 +169,7 @@ const ContactSection = () => {
             {showModal && (
                 <div className="modal">
                     <div className="modal-content">
-                        <h4 style={{color: 'black'}}>¡El mensaje se ha enviado correctamente!</h4>
+                        <h4 style={{ color: 'black' }}>¡El mensaje se ha enviado correctamente!</h4>
                     </div>
                 </div>
             )}

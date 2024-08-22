@@ -7,7 +7,7 @@
     flex-direction: column;
     align-items: center;
     width: 88%;
-    max-width: 967px;
+    max-width: 80%;
     margin: auto;
 }
 
@@ -18,9 +18,8 @@
 
 #resume .title-right-shift,
 #resume .title-right {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    margin-left: 70px
+    margin:auto;
+    padding: 28px;
 }
 
 .service-col {
@@ -29,37 +28,28 @@
 }
 .subtitle-container,
 .subtitle {
-    margin-bottom: 20px;
-    margin-top: 20px
+    margin: 10px auto;
 }
-
+#resume .service-items {
+    padding:initial;
+}
 
 .date {
     font-size: 11px;
     color: #fff;
-    width: 52px;
+    width: 11%;
     height: 32px;
     font-weight: 600;
     transform-origin: bottom left;
     transform: rotate(90deg);
     display: flex;
 }
-
 #resume .name {
-    margin-left: 28px;
+    margin-left: 10%;
     margin-bottom: 43px;
-    height: 34.4px;
+    height: 44.4px;
     text-align: center;
     width: 224px;
-}
-
-#resume .service-items {
-    display: flex;
-    justify-content: center;
-    flex-wrap: nowrap;
-    gap: 20px;
-    padding-left: 405px;
-    margin-left: 20px;
 }
 
 .resume-item .name {
@@ -68,20 +58,28 @@
     font-weight: 800;
 }
 
+.social-icons {
+    margin:auto;
+    padding: 5px;
+}
+.footer p {
+    color: #fdfcfc;
+    font-size: 0.875rem;
+    font-weight: 700;
+    margin: auto;
+}
+
 /* Reglas @media para dispositivos con ancho máximo de 1199px */
 @media (max-width: 1199px) {
     
     .profile-section {
-        padding: 0;
         /* Ajusta el padding para evitar desbordamientos */
         height: auto;
         /* Cambia a auto para adaptarse al contenido */
     }
 
     #resume .main-container {
-
-        padding-top: 5%;
-        /* Espacio en la parte superior */
+        padding-top: 27%;
     }
 
     .profile-title {
