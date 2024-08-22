@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import logo from '../assets/Gallery/Logo_personal.png';
-import '../assets/css/Navbar.css';
-// Importa font-awesome si es necesario para iconos adicionales
 import 'font-awesome/css/font-awesome.min.css';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom'; // Importar Link
+import logo from '../assets/Gallery/logo192.png';
+import '../assets/css/Navbar.css';
 
 function Navbar() {
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -25,10 +25,10 @@ function Navbar() {
         <nav>
             <div className={showMenu ? 'header show-menu' : 'header'}>
                 <div className="logo-container">
-                    <a href="/" className="logo">
-                        <img src={logo} alt="Logo" className="logo-img"/>
+                    <Link to="/" className="logo">
+                        <img src={logo} alt="Logo" className="logo-img" />
                         <span className="logo-lnk">Jose Campos</span>
-                    </a>
+                    </Link>
                 </div>
                 <div className="menu-btn" onClick={toggleMenu}>
                     <i className="fa fa-bars"></i>
@@ -55,13 +55,13 @@ function Navbar() {
 }
 
 function Navigation({ handleDownloadClick, showFileSelect }) {
+    // Definir handleFileSelection dentro del componente Navigation
     const handleFileSelection = (event) => {
         const fileUrl = event.target.value;
         if (fileUrl) {
-            // Crea un enlace temporal para descargar el archivo
             const link = document.createElement('a');
             link.href = fileUrl;
-            link.download = fileUrl.split('/').pop(); // Usa el nombre del archivo desde la URL
+            link.download = fileUrl.split('/').pop();
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
@@ -70,21 +70,17 @@ function Navigation({ handleDownloadClick, showFileSelect }) {
 
     return (
         <div className="menu">
-            <NavLink to="#perfil">INICIO</NavLink>
-            <NavLink to="#about">INFO</NavLink>
-            <NavLink to="#resume">RESUME</NavLink>
-            <NavLink to="#contact">CONTACTO</NavLink>
-            {/* Botón DESCARGAR que muestra el select cuando se hace clic */}
+            <NavLink to="/">INICIO</NavLink>
+            <NavLink to="/resume">RESUME</NavLink>
+            <NavLink to="/contact">CONTACTO</NavLink>
             <button className="nav-button download-btn" onClick={handleDownloadClick}>
                 DESCARGAR
             </button>
-
-            {/* Mostrar el select solo si el botón DESCARGAR fue presionado */}
             {showFileSelect && (
                 <div className="file-select-container">
                     <select id="fileSelect" onChange={handleFileSelection} defaultValue="">
                         <option value="">Seleccionar archivo</option>
-                        <option value="/CV/files/Cv-English-.pdf">CV Ingeles</option>
+                        <option value="/CV/files/Cv-English-.pdf">CV Inglés</option>
                         <option value="/CV/files/Cv-Español-.pdf">CV Español</option>
                     </select>
                 </div>
@@ -95,9 +91,9 @@ function Navigation({ handleDownloadClick, showFileSelect }) {
 
 function NavLink({ to, children }) {
     return (
-        <a href={to} className="nav-link">
+        <Link to={to} className="nav-link">
             <button className="nav-button">{children}</button>
-        </a>
+        </Link>
     );
 }
 
