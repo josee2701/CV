@@ -1,4 +1,5 @@
 import React from 'react';
+import { Route, Routes } from 'react-router-dom'; // Importar Routes y Route
 import './App.css';
 import About from './components/About';
 import Contact from './components/Contact';
@@ -11,12 +12,22 @@ import Resume from './components/Resume';
 function App() {
   return (
     <div>
-      <Navbar />
-      <Home />
-      <Profile />
-      <About />
-      <Resume />
-      <Contact />
+      <Navbar /> {/* Este componente siempre se mostrará */}
+      <Routes>
+        {/* Aquí estamos agrupando los componentes Home, Profile y About en la misma ruta */}
+        <Route 
+          path="/" 
+          element={
+            <>
+              <Home />
+              <Profile />
+              <About />
+            </>
+          } 
+        />
+        <Route path="/resume" element={<Resume />} /> 
+        <Route path="/contact" element={<Contact />} /> 
+      </Routes>
       <Footer />
     </div>
   );

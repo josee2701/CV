@@ -123,6 +123,68 @@ html {
     color: white; /* Cambiar el color de texto al pasar el mouse */
 }
 
+/* Contenedor del selector de archivos */
+.file-select-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* Estilo para el select */
+#fileSelect {
+    appearance: none; /* Elimina el estilo predeterminado del navegador */
+    background-color: #fff; /* Color de fondo blanco */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 4px; /* Bordes redondeados */
+    padding: 8px 12px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el select */
+    width: 200px; /* Ancho del select */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    transition: border-color 0.3s ease; /* Transición suave en el borde */
+}
+
+/* Estilo cuando el select está enfocado */
+#fileSelect:focus {
+    border-color: #007bff; /* Color del borde cuando está enfocado */
+    outline: none; /* Elimina el contorno predeterminado del navegador */
+}
+
+/* Estilo para el botón DESCARGAR */
+.nav-button.download-btn {
+    background-color: #b5b5b5; /* Color de fondo azul */
+    color: #fff; /* Color del texto blanco */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease; /* Transición suave en el color de fondo */
+}
+
+/* Estilo para el botón DESCARGAR cuando está en hover */
+.nav-button.download-btn:hover {
+    background-color: #0056b3; /* Color de fondo azul oscuro en hover */
+}
+.file-select-container {
+    margin-top: 10px;
+}
+
+#fileSelect {
+    appearance: none;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 200px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+#fileSelect:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+
 
 @media (max-width: 1199px) {
 	.header {
