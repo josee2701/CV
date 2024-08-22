@@ -16,7 +16,7 @@ function App() {
       <Routes>
         {/* Aquí estamos agrupando los componentes Home, Profile y About en la misma ruta */}
         <Route 
-          path="/" 
+          path="CV/" 
           element={
             <>
               <Home />

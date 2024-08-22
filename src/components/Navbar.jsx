@@ -69,7 +69,7 @@ function Navigation({ handleDownloadClick, showFileSelect }) {
 
     return (
         <div className="menu">
-            <NavLink to="/">INICIO</NavLink>
+            <NavLink to="CV/">INICIO</NavLink>
             <NavLink to="/resume">RESUME</NavLink>
             <NavLink to="/contact">CONTACTO</NavLink>
             <div className="dropdown">
