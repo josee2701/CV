@@ -55,9 +55,8 @@ function Navbar() {
 }
 
 function Navigation({ handleDownloadClick, showFileSelect }) {
-    // Definir handleFileSelection dentro del componente Navigation
-    const handleFileSelection = (event) => {
-        const fileUrl = event.target.value;
+    // Función para manejar la selección de archivos
+    const handleFileSelection = (fileUrl) => {
         if (fileUrl) {
             const link = document.createElement('a');
             link.href = fileUrl;
@@ -73,18 +72,22 @@ function Navigation({ handleDownloadClick, showFileSelect }) {
             <NavLink to="/">INICIO</NavLink>
             <NavLink to="/resume">RESUME</NavLink>
             <NavLink to="/contact">CONTACTO</NavLink>
-            <button className="nav-button download-btn" onClick={handleDownloadClick}>
-                DESCARGAR
-            </button>
-            {showFileSelect && (
-                <div className="file-select-container">
-                    <select id="fileSelect" onChange={handleFileSelection} defaultValue="">
-                        <option value="">Seleccionar archivo</option>
-                        <option value="/CV/files/Cv-English-.pdf">CV Inglés</option>
-                        <option value="/CV/files/Cv-Español-.pdf">CV Español</option>
-                    </select>
-                </div>
-            )}
+            <div className="dropdown">
+                <button className="nav-button download-btn" onClick={handleDownloadClick}>
+                    DESCARGAR
+                </button>
+                {showFileSelect && (
+                    <div className="dropdown-menu">
+                        {/* Pasamos la URL directamente al hacer clic */}
+                        <button onClick={() => handleFileSelection('/CV/files/Cv-English-.pdf')}>
+                            CV Inglés
+                        </button>
+                        <button onClick={() => handleFileSelection('/CV/files/Cv-Español-.pdf')}>
+                            CV Español
+                        </button>
+                    </div>
+                )}
+            </div>
         </div>
     );
 }
