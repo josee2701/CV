@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom'; // Importar Routes y Route
 import './App.css';
 import About from './components/About';
@@ -10,11 +10,28 @@ import Profile from './components/Profile';
 import Resume from './components/Resume';
 
 function App() {
+  useEffect(() => {
+    const cursor = document.createElement('div');
+    cursor.classList.add('custom-cursor');
+    document.body.appendChild(cursor);
+
+    const moveCursor = (e) => {
+      cursor.style.left = `${e.clientX}px`;
+      cursor.style.top = `${e.clientY}px`;
+    };
+
+    window.addEventListener('mousemove', moveCursor);
+
+    return () => {
+      window.removeEventListener('mousemove', moveCursor);
+      document.body.removeChild(cursor);
+    };
+  }, []);
+
   return (
     <div>
-      <Navbar /> {/* Este componente siempre se mostrará */}
+      <Navbar />
       <Routes>
-        {/* Aquí estamos agrupando los componentes Home, Profile y About en la misma ruta */}
         <Route 
           path="CV/" 
           element={
@@ -25,8 +42,8 @@ function App() {
             </>
           } 
         />
-        <Route path="/resume" element={<Resume />} /> 
-        <Route path="/contact" element={<Contact />} /> 
+        <Route path="/resume" element={<Resume />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
     </div>

@@ -23,9 +23,6 @@
     .title {
         font-size: 45px; /* Ajusta el tamaño de fuente para dispositivos más pequeños */
     }
-    .subtitle {
-        /* Si necesitas ajustes para el subtítulo aquí */
-    }
 }
 
 /* Considera agregar más reglas @media para tamaños de pantalla más pequeños */
