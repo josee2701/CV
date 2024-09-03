@@ -12,7 +12,7 @@ function ProfileTitle() {
     }, 3000);
 
     return () => clearTimeout(timer);
-  }, [currentIndex]);
+  }, [currentIndex, titles.length]); 
 
   return <h3 className="lenguajes">{titles[currentIndex]}</h3>;
 }

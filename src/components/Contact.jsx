@@ -56,7 +56,7 @@ const ContactSection = () => {
                 throw new Error('Error en la respuesta del servidor');
             }
 
-            const result = await response.json();
+            await response.json();
 
             // Eliminar datos de localStorage si la solicitud es exitosa
             localStorage.removeItem('contactFormData');
