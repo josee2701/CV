@@ -1,25 +1,53 @@
+/* Estilos generales */
 body {
   font-family: 'Arial', sans-serif;
   background-color: #072f4e;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  cursor: none; 
 }
+
 a {
   cursor: default; /* Cambia el cursor a uno estándar en lugar de la manita */
 }
-.custom-cursor {
-  position: fixed; /* Cambiar de absolute a fixed */
-  width: 20px; /* Tamaño del círculo */
-  height: 20px;
-  background-color: rgba(255, 255, 255, 0.8); /* Color y transparencia del cursor */
-  border-radius: 50%; /* Forma circular */
-  pointer-events: none; /* Evita que el cursor interactúe con los elementos */
-  transition: transform 0.1s ease-out; /* Añadir una ligera transición al movimiento */
-  z-index: 10000; /* Asegura que esté encima de todos los elementos */
+
+/* Estilos del cursor personalizado solo para pantallas no táctiles */
+@media (hover: hover) and (pointer: fine) {
+  body {
+    cursor: none;
+  }
+
+  .custom-cursor {
+    position: fixed; /* Cambiar de absolute a fixed */
+    width: 20px; /* Tamaño del círculo */
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Color y transparencia del cursor */
+    border-radius: 50%; /* Forma circular */
+    pointer-events: none; /* Evita que el cursor interactúe con los elementos */
+    transition: transform 0.1s ease-out; /* Añadir una ligera transición al movimiento */
+    z-index: 10000; /* Asegura que esté encima de todos los elementos */
+  }
+
+  /* Para botones */
+  button {
+    cursor: default; /* Cambia el cursor a uno estándar en lugar de la manita */
+  }
+
+  /* Sobrescribir el cursor en las opciones del menú */
+  .navbar-option {
+    cursor: default; /* Esto cambiará el cursor a uno estándar */
+  }
+
+  .navbar-option:hover {
+    cursor: none; /* Para evitar que se muestre la manita al pasar por encima */
+  }
+
+  .navbar-option:hover, a:hover, button:hover {
+    cursor: none; /* No mostrar ningún cursor en hover */
+  }
 }
 
+/* Estilos adicionales */
 .combined-profile-container {
   inline-size: 100%;
   max-inline-size: 1200px;
@@ -36,51 +64,6 @@ a {
   border-radius: 50%;
   margin-block-end: 20px;
 }
-
-
-
-.about h3 {
-  font-size: 18px;
-  margin-block-end: 10px;
-}
-
-/* Para botones */
-button {
-  cursor: default; /* Cambia el cursor a uno estándar en lugar de la manita */
-}
-
-/* Sobrescribir el cursor en las opciones del menú */
-.navbar-option {
-  cursor: default; /* Esto cambiará el cursor a uno estándar */
-}
-
-.navbar-option:hover {
-  cursor: none; /* Para evitar que se muestre la manita al pasar por encima */
-}
-
-.navbar-option:hover, a:hover, button:hover {
-  cursor: none; /* No mostrar ningún cursor en hover */
-}
-
-
-.combined-profile-container {
-  inline-size: 100%;
-  max-inline-size: 1200px;
-  margin: auto;
-  padding: 0 20px;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-}
-
-.App-logo {
-  inline-size: 150px;
-  block-size: 150px;
-  border-radius: 50%;
-  margin-block-end: 20px;
-}
-
-
 
 .about h3 {
   font-size: 18px;
